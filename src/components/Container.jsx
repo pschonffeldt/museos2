@@ -1,3 +1,12 @@
+import SearchResults from "./SearchResults";
+
 export default function Container() {
-  return <main>Container</main>;
+  return (
+    <main className="container">
+      Container
+      <div>
+        <SearchResults />
+      </div>
+    </main>
+  );
 }

@@ -1,3 +1,9 @@
+import SearchBar from "./SearchBar";
+
 export default function Topbar() {
-  return <nav>Topbar</nav>;
+  return (
+    <header className="top-bar">
+      <SearchBar />
+    </header>
+  );
 }
