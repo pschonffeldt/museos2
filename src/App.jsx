@@ -1,5 +1,11 @@
 function App() {
-  return <>test</>;
+  return (
+    <>
+      <Sidebar />
+      <Topbar />
+      <Container />
+    </>
+  );
 }
 
 export default App;
