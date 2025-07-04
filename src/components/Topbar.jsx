@@ -1,3 +1,3 @@
-export const Topbar = () => {
+export default function Topbar() {
   return <nav>Topbar</nav>;
-};
+}

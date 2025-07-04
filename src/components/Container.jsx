@@ -1,3 +1,3 @@
-export const Container = () => {
-  return <div>Container</div>;
-};
+export default function Container() {
+  return <main>Container</main>;
+}
