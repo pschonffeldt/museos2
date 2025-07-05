@@ -12,9 +12,9 @@ textarea {
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #cecece;
+  /* background-color: #ffffff; */
   overflow: hidden;
-  color: #292218;
+  /* color: #292218; */
 }
 
 #root {
@@ -23,34 +23,44 @@ body {
   justify-content: start;
   align-items: center;
   height: 100vh;
+
+  /* colors */
+  --color-white: #ffffff;
+  --color-lightgray: #f7f8fb;
+  --color-gray: #e2e8ed;
+  --color-darkgray: #6c757d;
+  --color-darkestgray: #485056;
+  --color-darkblue: #283042;
+  --color-middarkblue: #333b52;
+  --color-lightblue: #407fea;
+  --color-green: #e1f3e7;
+  --color-darkgreen: #4abf73;
+  --color-red: #fae1e0;
+  --color-darkred: #d8534e;
 }
 
 main {
-  width: 972px;
-  height: 636px;
-  background-color: #fff;
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 7fr 4fr;
-  grid-template-rows: 59px 1fr;
+  display: flex;
+  padding-top: 75px;
 }
 
 .top-bar {
   width: 100%;
-  height: 70px;
+  height: 75px;
   position: fixed;
-  background-color: #000000;
+  background-color: var(--color-white);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
-.search-bar {
+.search-bar-container {
   width: 50%;
-  height: 70px;
-  position: fixed;
-  background-color: #717171;
+  height: 75px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -58,8 +68,123 @@ main {
   padding-left: 50px;
 }
 
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  /* border: 1px dashed rgb(0, 255, 0); */
+}
+
+.search-bar-input {
+  flex: 1; /* take up available space */
+  height: 35px;
+  /* border: 1px dashed rgb(0, 4, 255); */
+}
+
+.search-bar-button {
+  margin-left: 8px; /* space between input & button */
+  height: 35px;
+  width: 200px;
+  background-color: var(--color-lightblue);
+  border: none;
+}
+
+.action-bar-container {
+  width: 50%;
+  height: 75px;
+  /* border: dashed rgb(0, 119, 255); */
+  display: flex;
+  justify-content: end; /* center horizontally */
+  align-items: center; /* center vertically */
+  /* padding-left: 0; remove left padding if you want true centering */
+}
+
+.container {
+  background-color: var(--color-gray);
+}
+
+/* Toggle switch */
+
+.button-cover,
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .button {
-  width: fit-content;
-  height: fit-content;
   position: relative;
+  width: 74px;
+  height: 35px;
+  margin: 0px auto 0 auto;
+  overflow: hidden;
+}
+
+.button.r .layer {
+  border-radius: 100px;
+  justify-content: end; /* center horizontally */
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: var(--color-lightblue);
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+#button-3 .knobs:before {
+  content: "TU";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 14px 4px;
+  background-color: var(--color-middarkblue);
+  border-radius: 50%;
+  transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+
+#button-3 .checkbox:active + .knobs:before {
+  width: 46px;
+  border-radius: 100px;
+}
+
+#button-3 .checkbox:checked:active + .knobs:before {
+  margin-left: -26px;
+}
+
+#button-3 .checkbox:checked + .knobs:before {
+  content: "LA";
+  left: 38px;
+  background-color: var(--color-darkred);
+}
+
+#button-3 .checkbox:checked ~ .layer {
+  background-color: var(--color-red);
 }

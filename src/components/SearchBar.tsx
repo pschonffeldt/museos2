@@ -1,13 +1,14 @@
 export default function SearchBar() {
   return (
-    <div className="search-bar">
-      <form>
-        <label>Busca museos por su nombre</label>
-        <input type="text"></input>
+    <div className="search-bar-container">
+      <form className="search-bar">
+        <input
+          className="search-bar-input"
+          type="text"
+          placeholder=" Busca museos por su nombre"
+        ></input>
+        <button className="search-bar-button">Buscar</button>
       </form>
-      <div className="button">
-        <button>Buscar</button>
-      </div>
     </div>
   );
 }
