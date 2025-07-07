@@ -44,7 +44,7 @@ export default function Container({ searchQuery }: ContainerProps) {
           </div>
         )}
       </div>
-      <div className="museum-details"></div>
+      <div className="museum-details">AQUI VAN LOS DETALLES</div>
     </main>
   );
 }

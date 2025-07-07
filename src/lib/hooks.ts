@@ -17,14 +17,7 @@ const supabase: SupabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
  */
 export function useMuseosSearch(
   searchText: string,
-  columns: string[] = [
-    "id",
-    "museum_name",
-    "museum_country",
-    "museum_region",
-    "museum_city",
-    "museum_municipality",
-  ]
+  columns: string[] = ["id", "museum_name", "museum_city", "museum_region"]
 ) {
   const [data, setData] = useState<MuseumRecord[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -77,7 +70,4 @@ export function useMuseosSearch(
   }, [searchText, columns.join(",")]); // re-run if column list changes
 
   return { data, isLoading, error };
-}
-function preventDefault() {
-  throw new Error("Function not implemented.");
 }
