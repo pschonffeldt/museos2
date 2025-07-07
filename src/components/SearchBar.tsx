@@ -1,27 +1,29 @@
 import { useState } from "react";
 
-type value = {
-  value: string;
-  // searchText: string;
-  // setSearchText: string;
+type SearchBarProps = {
+  searchText: string;
+  setSearchText: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export default function SearchBar() {
-  const [searchText, setSearchText] = useState("");
+export default function SearchBar({
+  searchText,
+  setSearchText,
+}: SearchBarProps) {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // This alert now uses the latest lifted state
+    alert(`A search has been made: ${searchText}`);
+  };
 
   return (
     <div className="search-bar-container">
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
-        className="search-bar"
-      >
+      <form onSubmit={handleSubmit} className="search-bar">
         <input
           value={searchText}
           onChange={(e) => {
-            setSearchText(e.target.value);
-            console.log(searchText);
+            const newValue = e.target.value;
+            setSearchText(newValue);
+            console.log(newValue);
           }}
           className="search-bar-input"
           type="text"
