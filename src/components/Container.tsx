@@ -36,7 +36,12 @@ export default function Container({ searchQuery }: ContainerProps) {
             No hay resultados para “<strong>{searchQuery}</strong>”
           </p>
         ) : (
-          <p>Escribe algo y pulsa Buscar para ver los resultados.</p>
+          <div className="museum-card">
+            <p>
+              Escribe el nombre del museo y pulsa Buscar para ver los
+              resultados.
+            </p>
+          </div>
         )}
       </div>
       <div className="museum-details"></div>

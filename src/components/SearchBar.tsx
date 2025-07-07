@@ -18,16 +18,21 @@ export default function SearchBar({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="search-bar">
-      <input
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
-        className="search-bar-input"
-        placeholder="Busca museos por su nombre"
-      />
-      <button type="submit" className="search-bar-button">
-        Buscar
-      </button>
-    </form>
+    <div className="search-bar">
+      <div className="search-bar-title-container">
+        <h1 className="search-bar-title">Buscador de Museos</h1>
+      </div>
+      <form onSubmit={handleSubmit} className="search-bar-module">
+        <input
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          className="search-bar-input"
+          placeholder="Busca museos por su nombre"
+        />
+        <button type="submit" className="search-bar-button">
+          Buscar
+        </button>
+      </form>
+    </div>
   );
 }

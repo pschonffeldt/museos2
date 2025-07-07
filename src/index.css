@@ -53,7 +53,7 @@ main {
   justify-content: flex-start;
 }
 
-.search-bar-container {
+/* .search-bar-container {
   width: 50%;
   height: 75px;
   display: flex;
@@ -61,13 +61,28 @@ main {
   justify-content: flex-start;
   align-items: center;
   padding-left: 50px;
-}
+} */
 
 .search-bar {
   display: flex;
   align-items: center;
+  gap: 20px;
+  width: 800px;
+}
+
+.search-bar-title-container {
+  width: 320px;
+  background-color: yellow;
+}
+
+.search-bar-title {
+  font-size: 24px;
+}
+
+.search-bar-module {
+  display: flex;
+  align-items: center;
   width: 600px;
-  padding: 0 10px;
 }
 
 .search-bar-input {
@@ -125,7 +140,7 @@ main {
 
 .museum-card-title {
   color: var(--color-darkestgray);
-  font-size: 16px;
+  font-size: 14px;
   text-align: left;
   width: 100%;
 }
