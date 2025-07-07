@@ -1,5 +1,4 @@
 // src/components/Container.tsx
-import React from "react";
 import { useMuseosSearch } from "../lib/hooks";
 import { MuseumRecord } from "../lib/types";
 
@@ -13,7 +12,7 @@ export default function Container({ searchQuery }: ContainerProps) {
   if (isLoading)
     return (
       <main className="container">
-        <p>Loading…</p>
+        <p>Cargando...</p>
       </main>
     );
   if (error)
@@ -25,22 +24,22 @@ export default function Container({ searchQuery }: ContainerProps) {
 
   return (
     <main className="container">
-      {results.length > 0 ? (
-        results.map((m: MuseumRecord) => (
-          <div key={m.id} className="museum-card">
-            <h2>{m.museum_name}</h2>
-            <p>
-              {m.museum_city}, {m.museum_region}
-            </p>
-          </div>
-        ))
-      ) : searchQuery ? (
-        <p>
-          No results for “<strong>{searchQuery}</strong>”
-        </p>
-      ) : (
-        <p>Type something above and hit Buscar to see results</p>
-      )}
+      <div className="container-search-list">
+        {results.length > 0 ? (
+          results.map((m: MuseumRecord) => (
+            <div key={m.id} className="museum-card">
+              <h2 className="museum-card-title">{m.museum_name}</h2>
+            </div>
+          ))
+        ) : searchQuery ? (
+          <p>
+            No hay resultados para “<strong>{searchQuery}</strong>”
+          </p>
+        ) : (
+          <p>Escribe algo y pulsa Buscar para ver los resultados.</p>
+        )}
+      </div>
+      <div className="museum-details"></div>
     </main>
   );
 }
