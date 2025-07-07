@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 type SearchBarProps = {
   searchText: string;
   setSearchText: React.Dispatch<React.SetStateAction<string>>;

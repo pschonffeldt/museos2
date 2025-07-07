@@ -12,9 +12,7 @@ textarea {
 
 body {
   font-family: "Inter", sans-serif;
-  /* background-color: #ffffff; */
   overflow: hidden;
-  /* color: #292218; */
 }
 
 #root {
@@ -74,17 +72,15 @@ main {
   width: 600px;
   padding: 0 10px;
   box-sizing: border-box;
-  /* border: 1px dashed rgb(0, 255, 0); */
 }
 
 .search-bar-input {
-  flex: 1; /* take up available space */
+  flex: 1;
   height: 35px;
-  /* border: 1px dashed rgb(0, 4, 255); */
 }
 
 .search-bar-button {
-  margin-left: 8px; /* space between input & button */
+  margin-left: 8px;
   height: 35px;
   width: 200px;
   background-color: var(--color-lightblue);
@@ -94,11 +90,9 @@ main {
 .action-bar-container {
   width: 50%;
   height: 75px;
-  /* border: dashed rgb(0, 119, 255); */
   display: flex;
-  justify-content: end; /* center horizontally */
-  align-items: center; /* center vertically */
-  /* padding-left: 0; remove left padding if you want true centering */
+  justify-content: end;
+  align-items: center;
 }
 
 .container {
@@ -127,7 +121,7 @@ main {
 
 .button.r .layer {
   border-radius: 100px;
-  justify-content: end; /* center horizontally */
+  justify-content: end;
 }
 
 .checkbox {
@@ -153,7 +147,7 @@ main {
 }
 
 #button-3 .knobs:before {
-  content: "TU";
+  content: "Dark";
   position: absolute;
   top: 0px;
   left: 0px;
@@ -167,21 +161,12 @@ main {
   padding: 14px 4px;
   background-color: var(--color-middarkblue);
   border-radius: 50%;
-  transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
-}
-
-#button-3 .checkbox:active + .knobs:before {
-  width: 46px;
-  border-radius: 100px;
-}
-
-#button-3 .checkbox:checked:active + .knobs:before {
-  margin-left: -26px;
+  transition: 0.3s ease all;
 }
 
 #button-3 .checkbox:checked + .knobs:before {
-  content: "LA";
-  left: 38px;
+  content: "Light";
+  left: 39px;
   background-color: var(--color-darkred);
 }
 

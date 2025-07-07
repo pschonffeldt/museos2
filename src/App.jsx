@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useState } from "react";
+import { useState } from "react";
 import Topbar from "./components/Topbar";
 import Container from "./components/Container";
 
