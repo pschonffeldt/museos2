@@ -6,15 +6,22 @@ import ActionButtons from "./ActionButtons";
 interface TopbarProps {
   searchText: string;
   setSearchText: React.Dispatch<React.SetStateAction<string>>;
+  onSearch: () => void;
 }
 
-const Topbar: React.FC<TopbarProps> = ({ searchText, setSearchText }) => {
+export default function Topbar({
+  searchText,
+  setSearchText,
+  onSearch,
+}: TopbarProps) {
   return (
     <header className="top-bar">
-      <SearchBar searchText={searchText} setSearchText={setSearchText} />
+      <SearchBar
+        searchText={searchText}
+        setSearchText={setSearchText}
+        onSearch={onSearch}
+      />
       <ActionButtons />
     </header>
   );
-};
-
-export default Topbar;
+}

@@ -1,29 +1,27 @@
+// src/components/Container.tsx
 import React from "react";
-import { MuseumRecord } from "../lib/types";
 import { useMuseosSearch } from "../lib/hooks";
+import { MuseumRecord } from "../lib/types";
 
 interface ContainerProps {
-  searchText: string;
+  searchQuery: string;
 }
 
-const Container: React.FC<ContainerProps> = ({ searchText }) => {
-  const { data: results, isLoading, error } = useMuseosSearch(searchText);
+export default function Container({ searchQuery }: ContainerProps) {
+  const { data: results, isLoading, error } = useMuseosSearch(searchQuery);
 
-  if (isLoading) {
+  if (isLoading)
     return (
       <main className="container">
         <p>Loading…</p>
       </main>
     );
-  }
-
-  if (error) {
+  if (error)
     return (
       <main className="container">
         <p>Error: {error}</p>
       </main>
     );
-  }
 
   return (
     <main className="container">
@@ -34,18 +32,15 @@ const Container: React.FC<ContainerProps> = ({ searchText }) => {
             <p>
               {m.museum_city}, {m.museum_region}
             </p>
-            {/* add more fields as needed */}
           </div>
         ))
-      ) : searchText ? (
+      ) : searchQuery ? (
         <p>
-          No results for “<strong>{searchText}</strong>”
+          No results for “<strong>{searchQuery}</strong>”
         </p>
       ) : (
         <p>Type something above and hit Buscar to see results</p>
       )}
     </main>
   );
-};
-
-export default Container;
+}
