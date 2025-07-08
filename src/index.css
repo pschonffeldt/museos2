@@ -175,6 +175,7 @@ main {
   text-align: start;
   gap: 10px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .museum-card-title {
