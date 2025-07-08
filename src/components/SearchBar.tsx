@@ -31,7 +31,7 @@ export default function SearchBar({
             placeholder="Busca museos por su nombre"
           />
           <button type="button" className="search-bar-button">
-            Buscar
+            Buscar museo
           </button>
         </form>
       </div>

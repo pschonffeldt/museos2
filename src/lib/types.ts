@@ -14,4 +14,6 @@ export interface MuseumRecord {
   museum_parking: boolean;
   museum_public_transpot: string;
   museum_website: string;
+  museum_description: string;
+  museum_collections_description: string;
 }

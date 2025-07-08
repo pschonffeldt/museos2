@@ -17,7 +17,24 @@ const supabase: SupabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
  */
 export function useMuseosSearch(
   searchText: string,
-  columns: string[] = ["id", "museum_name", "museum_city", "museum_region"]
+  columns: string[] = [
+    "id",
+    "museum_name",
+    "museum_description",
+    "museum_collections_description",
+    "museum_country",
+    "museum_region",
+    "museum_city",
+    "museum_municipality",
+    "museum_address",
+    "museum_ownership_type",
+    "museum_collections",
+    "museum_director",
+    "museum_opening_hours",
+    "museum_parking",
+    "museum_public_transpot",
+    "museum_website",
+  ]
 ) {
   const [data, setData] = useState<MuseumRecord[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);

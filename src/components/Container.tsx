@@ -1,50 +1,46 @@
 // src/components/Container.tsx
+import React, { useState } from "react";
 import { useMuseosSearch } from "../lib/hooks";
-import { MuseumRecord } from "../lib/types";
+import type { MuseumRecord } from "../lib/types";
+import MuseumDetails from "./MuseumDetails";
 
 interface ContainerProps {
   searchQuery: string;
 }
 
 export default function Container({ searchQuery }: ContainerProps) {
+  // 1) Use your hook to get search results
   const { data: results, isLoading, error } = useMuseosSearch(searchQuery);
 
-  if (isLoading)
-    return (
-      <main className="container">
-        <p>Cargando...</p>
-      </main>
-    );
-  if (error)
-    return (
-      <main className="container">
-        <p>Error: {error}</p>
-      </main>
-    );
+  // 2) Track which museum is clicked
+  const [selectedMuseum, setSelectedMuseum] = useState<MuseumRecord | null>(
+    null
+  );
 
   return (
     <main className="container">
-      <div className="container-search-list">
-        {results.length > 0 ? (
-          results.map((m: MuseumRecord) => (
-            <div key={m.id} className="museum-card">
+      <aside className="container-search-list">
+        {isLoading ? null : error ? (
+          <p>Error: {error}</p>
+        ) : results.length > 0 ? (
+          results.map((m) => (
+            <div
+              key={m.id}
+              className={`museum-card ${
+                selectedMuseum?.id === m.id ? "selected" : ""
+              }`}
+              onClick={() => setSelectedMuseum(m)}
+            >
               <h2 className="museum-card-title">{m.museum_name}</h2>
             </div>
           ))
-        ) : searchQuery ? (
-          <p>
-            No hay resultados para “<strong>{searchQuery}</strong>”
-          </p>
-        ) : (
-          <div className="museum-card">
-            <p>
-              Escribe el nombre del museo y pulsa Buscar para ver los
-              resultados.
-            </p>
-          </div>
-        )}
-      </div>
-      <div className="museum-details">AQUI VAN LOS DETALLES</div>
+        ) : null}
+      </aside>
+
+      {/* Details pane: always visible, shows placeholder or actual details */}
+      <section className="museum-details">
+        <MuseumDetails museum={selectedMuseum} />
+      </section>
     </main>
   );
 }
