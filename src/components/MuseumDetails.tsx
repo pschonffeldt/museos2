@@ -1,5 +1,4 @@
 // src/components/MuseumDetails.tsx
-import React from "react";
 import type { MuseumRecord } from "../lib/types";
 
 interface DetailsProps {

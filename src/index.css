@@ -23,7 +23,7 @@ body {
 
   /* colors */
   --color-white: #ffffff;
-  --color-lightgray: #f7f8fb;
+  --color-lightgray: #f7f9fc;
   --color-gray: #e2e8ed;
   --color-darkgray: #6c757d;
   --color-darkestgray: #485056;
@@ -47,7 +47,7 @@ main {
 /* Topbar */
 
 .top-bar {
-  width: 100vw; /* is this better */
+  width: 100vw;
   height: 75px;
   background-color: var(--color-white);
   display: flex;
@@ -76,15 +76,16 @@ main {
   content: "";
   display: block;
   width: 100%;
-  height: 3px;
-  background-color: var(--color-lightblue);
-  margin-top: 4px; /* optional spacing */
+  height: 2px;
+  background-color: var(--color-white);
+  margin-top: 4px;
 }
 
 /* Searh bar container */
 
 .search-bar {
   display: flex;
+  width: 100%;
   align-items: center;
   gap: 20px;
 }
@@ -92,11 +93,14 @@ main {
 .search-bar-module {
   display: flex;
   align-items: center;
-  width: 600px;
+}
+
+.search-bar-form {
 }
 
 .search-bar-input {
   flex: 1;
+  width: 500px;
   height: 35px;
   padding-left: 5px;
 }
@@ -203,13 +207,13 @@ main {
   width: 100%;
   display: flex;
   flex-direction: row;
-  background-color: var(--color-gray);
+  background-color: var(--color-lightgray);
 }
 
 /* Museum details */
 
 .museum-details {
-  width: 80%;
+  width: 81%;
 }
 
 .museum-details-container {
