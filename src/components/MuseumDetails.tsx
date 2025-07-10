@@ -11,7 +11,7 @@ export default function MuseumDetails({ museum }: DetailsProps) {
   }
   return (
     <div className="museum-details-container">
-      <div className="museum-details-title">
+      {/* <div className="museum-details-title">
         <h2>Detalles del museo: {museum.museum_name}</h2>
       </div>
 
@@ -48,7 +48,7 @@ export default function MuseumDetails({ museum }: DetailsProps) {
       <div className="museum-details-collections">
         <h3>Colección y espacios</h3>
         <p>{museum.museum_collections_description}</p>
-      </div>
+      </div> */}
     </div>
   );
 }

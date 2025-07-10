@@ -19,28 +19,8 @@ export default function Container({ searchQuery }: ContainerProps) {
 
   return (
     <main className="container">
-      <aside className="container-search-list">
-        {isLoading ? null : error ? (
-          <p>Error: {error}</p>
-        ) : results.length > 0 ? (
-          results.map((m) => (
-            <div
-              key={m.id}
-              className={`museum-card ${
-                selectedMuseum?.id === m.id ? "selected" : ""
-              }`}
-              onClick={() => setSelectedMuseum(m)}
-            >
-              <h2 className="museum-card-title">{m.museum_name}</h2>
-            </div>
-          ))
-        ) : null}
-      </aside>
-
-      {/* Details pane: always visible, shows placeholder or actual details */}
-      <section className="museum-details">
-        <MuseumDetails museum={selectedMuseum} />
-      </section>
+      <nav className="nav"></nav>
+      <div className="content"></div>
     </main>
   );
 }

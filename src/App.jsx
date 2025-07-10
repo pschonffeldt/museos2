@@ -1,26 +1,25 @@
 // src/App.jsx
-import { useState } from "react";
 import Topbar from "./components/Topbar";
 import Container from "./components/Container";
 
 // Single, top-level export
 export default function App() {
-  const [searchText, setSearchText] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [searchText, setSearchText] = useState("");
+  // const [searchQuery, setSearchQuery] = useState("");
 
-  // Called only on button-click / form submit
-  const handleSearch = () => {
-    setSearchQuery(searchText);
-  };
+  // // Called only on button-click / form submit
+  // const handleSearch = () => {
+  //   setSearchQuery(searchText);
+  // };
 
   return (
     <>
-      <Topbar
+      {/* <Topbar
         searchText={searchText}
         setSearchText={setSearchText}
         onSearch={handleSearch}
-      />
-      <Container searchQuery={searchQuery} />
+      /> */}
+      <Container />
     </>
   );
 }
