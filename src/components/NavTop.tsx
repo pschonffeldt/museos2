@@ -15,6 +15,9 @@ export default function NavTop() {
           </button>
         </form>
       </div>
+      <div className="nav-top-buttons">
+        <button className="nav-top-button">Donar</button>
+      </div>
     </nav>
   );
 }

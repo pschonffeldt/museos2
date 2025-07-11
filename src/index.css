@@ -148,7 +148,7 @@ body {
 .nav-top {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   width: 80vw;
   height: 75px;
   background-color: var(--color-white);
@@ -158,7 +158,7 @@ body {
 
 .search-bar-container {
   align-content: center;
-  width: 100%;
+  width: 40%;
   height: 75px;
 }
 
@@ -208,6 +208,33 @@ body {
   background-color: var(--color-lightblue);
 }
 
+/* Top nav bar Action buttons */
+
+.nav-top-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  padding-right: 50px;
+}
+
+.nav-top-button {
+  height: 35px;
+  width: 100px;
+  border-radius: 2px;
+  background-color: var(--color-lightblue);
+  border: none;
+  color: var(--color-white);
+  transition: all 0.1s ease-in-out;
+}
+
+.nav-top-button:hover {
+  transform: scale(1.05);
+}
+
+/* Details container */
+
 .details-container {
   width: 100%;
   height: 100vh;
@@ -218,6 +245,48 @@ body {
   padding: 20px;
   background-color: var(--color-gray);
   height: 100%;
+}
+
+/* Summary cards */
+
+.museum-summary-cards {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--color-darkgreen);
+  height: 200px;
+  width: 100%;
+  gap: 50px;
+}
+
+.museum-summary-card {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-darkred);
+  height: 100px;
+  width: 25%;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.museum-summary-card-text {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-darkestgray);
+  height: 100px;
+  width: 25%;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.museum-summary-card-icon {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-lightblue);
+  height: 100px;
+  width: 25%;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 /* old */
