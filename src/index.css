@@ -130,6 +130,14 @@ body {
   cursor: pointer;
 }
 
+.result-name {
+  color: var(--color-darkestgray);
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+  font-weight: bold;
+}
+
 /* Top nav bar */
 
 .content {

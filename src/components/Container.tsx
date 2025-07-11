@@ -11,7 +11,7 @@ export default function Container() {
         </div>
         <div className="results">
           <div className="result-container">
-            <p>Nombre del museo</p>
+            <p className="result-name">El que tiene color del museo</p>
           </div>
           <div className="result-container">
             <p>Nombre del museo</p>
