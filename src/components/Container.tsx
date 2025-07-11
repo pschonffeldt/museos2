@@ -3,7 +3,9 @@
 export default function Container() {
   return (
     <main className="container">
-      <nav className="nav">
+      {/* Nav bar izquierda */}
+
+      <nav className="nav-left">
         <div className="title-container">
           <h1 className="title">Buscador de Museos</h1>
         </div>
@@ -74,22 +76,41 @@ export default function Container() {
           <div className="result-container">
             <p>Nombre del museo</p>
           </div>
+          <div className="result-container">
+            <p>Nombre del museo</p>
+          </div>
+          <div className="result-container">
+            <p>Nombre del museo</p>
+          </div>
+          <div className="result-container">
+            <p>Nombre del museo</p>
+          </div>
+          <div className="result-container">
+            <p>Nombre del museo</p>
+          </div>
+          <div className="result-container">
+            <p>Tula del museo</p>
+          </div>
         </div>
       </nav>
 
-      {/* Separador super cool */}
+      {/* Nav bar superior */}
 
       <div className="content">
-        <div className="search-bar">
-          <div className="search-bar-module">
+        <nav className="nav-top">
+          <div className="search-bar-container">
             <form className="search-bar-form">
-              <input />
+              <input
+                className="search-bar-form-input"
+                placeholder="Busca museos por su nombre..."
+              />
               <button type="submit" className="search-bar-button">
                 Buscar museo
               </button>
             </form>
           </div>
-        </div>
+        </nav>
+
         <div className="details-container">
           <div className="details-container-layout"></div>
         </div>
