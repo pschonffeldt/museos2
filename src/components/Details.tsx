@@ -10,12 +10,24 @@ export default function Details({ children }: { children: React.ReactNode }) {
         </div>
         <div className="museum-summary-cards">
           <div className="museum-summary-card">
+            <div className="museum-summary-card-text">
+              <h3>Titulo</h3>
+              <p>Parrafo</p>
+            </div>
+            <div className="museum-summary-card-icon">Icono</div>
+          </div>
+          <div className="museum-summary-card">
             <div className="museum-summary-card-text">Texto</div>
             <div className="museum-summary-card-icon">Icono</div>
           </div>
-          <div className="museum-summary-card">Cajita 2</div>
-          <div className="museum-summary-card">Cajita 3</div>
-          <div className="museum-summary-card">Cajita 4</div>
+          <div className="museum-summary-card">
+            <div className="museum-summary-card-text">Texto</div>
+            <div className="museum-summary-card-icon">Icono</div>
+          </div>
+          <div className="museum-summary-card">
+            <div className="museum-summary-card-text">Texto</div>
+            <div className="museum-summary-card-icon">Icono</div>
+          </div>
         </div>
         {children}
       </div>
