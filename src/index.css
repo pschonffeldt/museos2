@@ -57,6 +57,15 @@ body {
   flex-direction: row;
 }
 
+/* Utility classes - Width */
+
+.u-c70 {
+  width: 70%;
+}
+.u-c30 {
+  width: 30%;
+}
+
 /* Left nav bar */
 
 .nav-left {
@@ -346,17 +355,64 @@ body {
   gap: 20px;
   border-radius: 0.25rem;
   padding: 15px;
+  justify-content: space-between;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
-.c70 {
-  width: 70%;
+
+.museum-description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 50px;
+  height: 100%;
+  width: 100%;
 }
-.c30 {
-  width: 30%;
+
+.museum-description-utility-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  height: 50px;
+  width: 100%;
 }
 
 .museum-description {
 }
 
 .museum-collection {
+}
+
+.museum-map {
+  background-color: #4abf73;
+  border-radius: 0.25rem;
+
+  width: 100%;
+  height: 50%;
+}
+
+.museum-map-summary {
+  background-color: #d8534e;
+  border-radius: 0.25rem;
+
+  width: 100%;
+  height: 50%;
+}
+
+.utility-bar-button {
+  margin-right: 16px;
+  height: 35px;
+  padding: 10px;
+  width: 25%;
+  border-radius: 0.25rem;
+  background-color: var(--color-lightblue);
+  border: none;
+  color: var(--color-white);
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.utility-bar-button:hover {
+  transform: scale(1.05);
 }
