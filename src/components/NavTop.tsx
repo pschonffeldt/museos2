@@ -16,7 +16,17 @@ export default function NavTop() {
         </form>
       </div>
       <div className="nav-top-buttons">
-        <button className="nav-top-button">Donar</button>
+        <button
+          className="nav-top-button"
+          onClick={() =>
+            window.open(
+              "https://link.mercadopago.cl/pabloschonffeldt",
+              "_blank"
+            )
+          }
+        >
+          Donar
+        </button>
       </div>
     </nav>
   );
