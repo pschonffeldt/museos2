@@ -2,15 +2,14 @@
 import React from "react";
 import NavTop from "./NavTop";
 import Details from "./Details";
+import Footer from "./Footer";
 
 export default function Main({ children }: { children: React.ReactNode }) {
   return (
     <div className="content">
       <NavTop />
       <Details>{children}</Details>
-      <footer>
-        <p>Creado por pschonffeldt</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
