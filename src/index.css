@@ -36,6 +36,18 @@ body {
   --color-darkred: #d8534e;
 }
 
+/* Utility classes */
+
+/* Utility classes - Text color */
+
+.u-darkestgray {
+  color: var(--color-darkestgray);
+}
+
+.u-thin {
+  font-weight: 400;
+}
+
 /* Container module */
 
 .container {
@@ -107,7 +119,7 @@ body {
 
 .results::-webkit-scrollbar-thumb {
   background-color: var(--color-lightblue); /* Scroll thumb color */
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .results::-webkit-scrollbar-thumb:hover {
@@ -125,7 +137,7 @@ body {
   justify-content: center;
   text-align: start;
   gap: 10px;
-  border-radius: 15px;
+  border-radius: 0.25rem;
   cursor: pointer;
 }
 
@@ -187,7 +199,7 @@ body {
   margin-left: 8px;
   height: 35px;
   width: 100px;
-  border-radius: 2px;
+  border-radius: 0.25rem;
   background-color: var(--color-lightblue);
   border: none;
   color: var(--color-white);
@@ -223,7 +235,7 @@ body {
 .nav-top-button {
   height: 35px;
   width: 100px;
-  border-radius: 2px;
+  border-radius: 0.25rem;
   background-color: var(--color-lightblue);
   border: none;
   color: var(--color-white);
@@ -254,6 +266,11 @@ body {
 .details-title-container {
 }
 
+.details-title {
+  color: var(--color-darkestgray);
+  font-weight: 400;
+}
+
 /* Summary cards */
 
 .museum-summary-cards {
@@ -271,7 +288,7 @@ body {
   background-color: var(--color-white);
   height: 150px;
   width: 25%;
-  border-radius: 10px;
+  border-radius: 0.25rem;
   padding: 15px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
@@ -327,7 +344,7 @@ body {
   background-color: var(--color-white);
   height: 100%;
   gap: 20px;
-  border-radius: 10px;
+  border-radius: 0.25rem;
   padding: 15px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }

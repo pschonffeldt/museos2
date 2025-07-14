@@ -7,7 +7,9 @@ export default function MuseumTitle({
 }) {
   return (
     <div className="details-title-container">
-      <h2>Museo Nacional Aeronáutico y del Espacio</h2>
+      <h2 className="details-title">
+        Museo Nacional Aeronáutico y del Espacio
+      </h2>
     </div>
   );
 }
