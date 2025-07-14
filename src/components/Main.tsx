@@ -8,6 +8,9 @@ export default function Main({ children }: { children: React.ReactNode }) {
     <div className="content">
       <NavTop />
       <Details>{children}</Details>
+      <footer>
+        <p>Creado por pschonffeldt</p>
+      </footer>
     </div>
   );
 }

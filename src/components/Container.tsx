@@ -19,7 +19,7 @@ export default function Container() {
         ))}
       </Sidebar>
 
-      <Main>{/* Pass any detail view or children here */}</Main>
+      <Main children={undefined} />
     </main>
   );
 }

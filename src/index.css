@@ -43,7 +43,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: row;
-  background-color: var(--color-darkgreen);
 }
 
 /* Left nav bar */
@@ -242,20 +241,17 @@ body {
   height: 100vh;
   background-color: var(--color-gray);
   overflow-y: auto; /* ← enable the scrollbar when needed */
-  /* border: dotted 1px black; */
 }
 
 .details-container-layout {
   padding: 20px;
   height: 100%;
-  border: dotted 1px black;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .details-title-container {
-  /* border: dotted 1px black; */
 }
 
 /* Summary cards */
@@ -267,7 +263,6 @@ body {
   height: 150px;
   width: 100%;
   gap: 20px;
-  /* border: dotted 1px black; */
 }
 
 .museum-summary-card {
@@ -279,7 +274,6 @@ body {
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  /* border: dotted 1px black; */
 }
 
 .museum-summary-card-text {
@@ -288,7 +282,6 @@ body {
   height: 100%;
   width: 70%;
   padding: 15px;
-  /* border: dotted 1px black; */
 }
 
 .museum-summary-card-title {
@@ -310,7 +303,6 @@ body {
   height: 100%;
   width: 30%;
   padding: 15px;
-  /* border: dotted 1px black; */
 }
 
 .summary-card-icon {
@@ -327,7 +319,6 @@ body {
   height: 100%;
   width: 100%;
   gap: 20px;
-  /* border: dotted 1px black; */
 }
 
 .museum-details-card-column {
@@ -339,7 +330,6 @@ body {
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  /* border: dotted 1px black; */
 }
 .c70 {
   width: 70%;
