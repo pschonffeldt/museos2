@@ -1,3 +1,6 @@
+// One for each row of data I want to bring to my app.
+// If I happen to add new rows, and if I want to use it on my app, I need to add it to this list and set the type
+
 export interface MuseumRecord {
   id: number;
   created_at: string;
@@ -16,4 +19,6 @@ export interface MuseumRecord {
   museum_website: string;
   museum_description: string;
   museum_collections_description: string;
+  museum_complete: boolean;
+  museum_directions: string;
 }

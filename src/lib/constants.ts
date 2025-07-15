@@ -1,3 +1,0 @@
-export const BASE_API_URL = "https://kizrhaizwtspwfcgylmm.supabase.co";
-export const SUPABASE_ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtpenJoYWl6d3RzcHdmY2d5bG1tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEyOTE4MjgsImV4cCI6MjA2Njg2NzgyOH0.Javw11U5Pfy59ZFuuoX40DGk3GQH8QbO2D0aRcftLw0";

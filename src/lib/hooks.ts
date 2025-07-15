@@ -34,6 +34,8 @@ export function useMuseosSearch(
     "museum_parking",
     "museum_public_transpot",
     "museum_website",
+    "museum_complete",
+    "museum_directions",
   ]
 ) {
   const [data, setData] = useState<MuseumRecord[]>([]);

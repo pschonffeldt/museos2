@@ -3,9 +3,9 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import Main from "./Main";
 
-export default function Container() {
+export default function Layout() {
   const dummyResults = Array.from(
-    { length: 25 },
+    { length: 5 },
     (_, i) => `Nombre del museo ${i + 1}`
   );
 
