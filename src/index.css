@@ -71,6 +71,7 @@ body {
 .nav-left {
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
   min-height: 0; /* ← this is the key for the parent */
   width: 20vw;
   min-width: 320px;
@@ -329,6 +330,7 @@ body {
   height: 100%;
   width: 30%;
   padding: 15px;
+  gap: 10px;
 }
 
 .summary-card-icon {
@@ -415,4 +417,9 @@ body {
 
 .utility-bar-button:hover {
   transform: scale(1.05);
+}
+
+.footer-text {
+  text-align: right;
+  padding-right: 20px;
 }

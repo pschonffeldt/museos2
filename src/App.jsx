@@ -1,9 +1,9 @@
-import Container from "./components/Container";
+import Layout from "./components/Layout";
 
 export default function App() {
   return (
     <>
-      <Container />
+      <Layout />
     </>
   );
 }
