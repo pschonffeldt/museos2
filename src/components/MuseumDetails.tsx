@@ -40,6 +40,27 @@ export default function MuseumDetails({
               para todas las edades.
             </p>
           </div>
+          <div className="museum-space">
+            <h3>Descripción del espacio del museo:</h3>
+            <p>
+              El pabellón actual, diseñado por el arquitecto Fernando Torres
+              Arancibia e inaugurado en marzo de 1992, presenta una estructura
+              inspirada en un hangar, con amplias fachadas de vidrio y un
+              entramado de acero expuesto que evoca su herencia aeronáutica. Al
+              adentrarse en la plaza exterior, los visitantes descubrirán una
+              extensa zona de exposición al aire libre donde los aviones
+              históricos se exhiben sobre senderos pavimentados. La colección
+              del museo suma 97 aeronaves, de las cuales 35 están protegidas
+              como Monumentos Nacionales, muchas expuestas al aire libre para
+              aprovechar al máximo el antiguo trazado de la pista. El museo
+              cuenta con estacionamiento gratuito junto al recinto, lo que
+              facilita la llegada en automóvil, y la estación de metro Cerrillos
+              (Línea 6), a solo 450 m al norte, ofrece acceso rápido en
+              transporte público. Además, a 730 m al sur se extiende el Parque
+              Bicentenario Cerrillos, un espacio verde con senderos sombreados y
+              áreas de picnic ideal para un paseo antes o después de la visita.
+            </p>
+          </div>
         </div>
         <div className="museum-description-utility-container">
           <button

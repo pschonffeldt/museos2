@@ -1,25 +1,28 @@
-// src/components/Container.tsx
-import React from "react";
+// src/components/Layout.tsx
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import Main from "./Main";
+import { useMuseosSearch } from "../lib/hooks";
 
 export default function Layout() {
-  const dummyResults = Array.from(
-    { length: 5 },
-    (_, i) => `Nombre del museo ${i + 1}`
-  );
+  const [searchText, setSearchText] = useState("");
+  const { data, isLoading, error } = useMuseosSearch(searchText);
 
   return (
     <main className="container">
       <Sidebar>
-        {dummyResults.map((name, idx) => (
-          <div key={idx} className="result-container">
-            <p className={idx === 0 ? "result-name" : undefined}>{name}</p>
-          </div>
-        ))}
+        {error && <div>Error al cargar los museos...</div>}
+        {/* {isLoading && <div className="loading-msg">Cargando...</div>} */}
+        {!isLoading &&
+          !error &&
+          data.map((museum) => (
+            <div key={museum.id} className="result-container">
+              <p className="result-name">{museum.museum_name}</p>
+            </div>
+          ))}
       </Sidebar>
 
-      <Main children={undefined} />
+      <Main onSearch={setSearchText}>{/* Detail view or children here */}</Main>
     </main>
   );
 }

@@ -1,32 +1,32 @@
 // src/components/NavTop.tsx
-import React from "react";
+import React, { useState } from "react";
 
-export default function NavTop() {
+interface NavTopProps {
+  onSearch: (query: string) => void;
+}
+
+export default function NavTop({ onSearch }: NavTopProps) {
+  const [query, setQuery] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSearch(query);
+  };
+
   return (
     <nav className="nav-top">
       <div className="search-bar-container">
-        <form className="search-bar-form">
+        <form className="search-bar-form" onSubmit={handleSubmit}>
           <input
             className="search-bar-form-input"
             placeholder="Busca museos por su nombre..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
           />
           <button type="submit" className="search-bar-button">
             Buscar museo
           </button>
         </form>
-      </div>
-      <div className="nav-top-buttons">
-        <button
-          className="nav-top-button"
-          onClick={() =>
-            window.open(
-              "https://link.mercadopago.cl/pabloschonffeldt",
-              "_blank"
-            )
-          }
-        >
-          Donar
-        </button>
       </div>
     </nav>
   );

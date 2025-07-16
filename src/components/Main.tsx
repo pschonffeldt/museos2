@@ -2,14 +2,17 @@
 import React from "react";
 import NavTop from "./NavTop";
 import Details from "./Details";
-import Footer from "./Footer";
 
-export default function Main({ children }: { children: React.ReactNode }) {
+interface MainProps {
+  onSearch: (query: string) => void;
+  children?: React.ReactNode;
+}
+
+export default function Main({ onSearch, children }: MainProps) {
   return (
     <div className="content">
-      <NavTop />
+      <NavTop onSearch={onSearch} />
       <Details>{children}</Details>
-      <Footer />
     </div>
   );
 }
