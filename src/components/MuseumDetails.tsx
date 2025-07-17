@@ -51,15 +51,15 @@ export default function MuseumDetails({ museum }: MuseumDetailsProps) {
       </div>
       <div className="museum-details-card-column u-c30">
         <div className="pricing">
-          <h3>Precios</h3>
+          <h3 className="pricing-list">Precios:</h3>
           <ul>
-            <li>Precio general</li>
-            <li>Precio 3ra edad</li>
-            <li>Precio niños</li>
-            <li>Precio vecinos</li>
+            <li>Precio general: $3.000</li>
+            <li>Precio 3ra edad: $2.000</li>
           </ul>
-          <h3>Precios</h3>
+          <h3 className="pricing-list">Descuentos especiales:</h3>
           <ul>
+            <li>Niños gratis</li>
+            <li>Vecinos gratis (tarjeta vecino)</li>
             <li>Domingo gratis</li>
             <li>Sabado donacion</li>
           </ul>
