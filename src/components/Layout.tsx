@@ -3,70 +3,90 @@ import React, { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
 import Main from "./Main";
 import Notification from "./Notification";
+import MuseumTitle from "./MuseumTitle";
+import MuseumDetails from "./MuseumDetails";
 import { useMuseosSearch } from "../lib/hooks";
 
-// Layout is the top-level component composing Sidebar, Main, and Notifications
+/**
+ * Layout manages the entire search, notification, result list, and detail view flow.
+ */
 export default function Layout() {
-  // searchText: stores current user input from the search bar
-  const [searchText, setSearchText] = useState("");
-  // delayedSearchText: the value actually sent to the fetch hook after a delay
-  const [delayedSearchText, setDelayedSearchText] = useState("");
-  // showNotification: controls when the loading notification is visible
-  const [showNotification, setShowNotification] = useState(false);
-  // delayDuration: both the artificial fetch delay and notification display length (in ms)
-  const delayDuration = 3000;
+  // current search query (trigger to fetch)
+  const [query, setQuery] = useState("");
+  // fetched results
+  const [results, setResults] = useState<any[]>([]);
+  // notification text (e.g. Searching, No results, Error)
+  const [notification, setNotification] = useState<string | null>(null);
+  // selected museum for details
+  const [selected, setSelected] = useState<any>(null);
 
-  // 1️⃣ When user submits a search (searchText changes), show the notification immediately
-  useEffect(() => {
-    if (!searchText) return;
-    setShowNotification(true);
-  }, [searchText]);
+  // custom hook for fetching from Supabase
+  const { data, isLoading, error } = useMuseosSearch(query);
 
-  // 2️⃣ Delay updating delayedSearchText by delayDuration so fetch only runs after this time
+  // === Step 1: User submits a search ===
+  // Main.onSearch calls handleSearch, which sets the query and triggers the first effect.
+  const handleSearch = (q: string) => {
+    // clear previous state
+    setSelected(null);
+    setResults([]);
+    // show immediate notification
+    setNotification("Searching...");
+    // trigger fetch
+    setQuery(q);
+  };
+
+  // === Step 2: Fetch completes or errors ===
   useEffect(() => {
-    if (!searchText) {
-      // if the input is cleared, reset the delayed value to cancel any pending fetch
-      setDelayedSearchText("");
+    if (isLoading) return; // still searching
+
+    if (error) {
+      setNotification("Error loading results");
       return;
     }
-    const timer = setTimeout(() => {
-      setDelayedSearchText(searchText);
-    }, delayDuration);
-    return () => clearTimeout(timer);
-  }, [searchText, delayDuration]);
 
-  // 3️⃣ Invoke custom hook: uses delayedSearchText to fetch matching museums
-  const { data, isLoading, error } = useMuseosSearch(delayedSearchText);
-
-  // 4️⃣ Once loading finishes, hide the notification so it can show again on the next search
-  useEffect(() => {
-    if (!isLoading) setShowNotification(false);
-  }, [isLoading]);
+    // fetch done
+    if (data && data.length > 0) {
+      setResults(data);
+      setNotification(null); // clear "Searching..."
+    } else if (query) {
+      // no matches found
+      setNotification("No se encontraron resultados relacionados");
+    }
+  }, [isLoading, data, error, query]);
 
   return (
     <>
-      {/* Show 'Cargando...' notification while loading or during artificial delay */}
-      {showNotification && (
-        <Notification message="Buscando..." duration={delayDuration} />
-      )}
+      {/* Notification bar at top-right */}
+      {notification && <Notification message={notification} duration={3000} />}
 
-      {/* Main container splits UI into Sidebar (results) and Main (search & details) */}
       <main className="container">
-        <Sidebar>
-          {/* Error state: display a message if fetch failed */}
-          {error && <div>Error loading museums.</div>}
-          {/* Results: once loading is done, map over data array */}
-          {!isLoading &&
-            data.map((museum) => (
-              <div key={museum.id} className="result-container">
-                <p className="result-name">{museum.museum_name}</p>
-              </div>
-            ))}
+        {/* Sidebar shows result list and handles selection */}
+        <Sidebar
+          onSelect={(id) => {
+            const item = results.find((r) => r.id === id);
+            if (item) setSelected(item);
+          }}
+        >
+          {results.map((m) => (
+            <div
+              key={m.id}
+              className="result-container"
+              onClick={() => setSelected(m)}
+              style={{ cursor: "pointer" }}
+            >
+              <p className="result-name">{m.museum_name}</p>
+            </div>
+          ))}
         </Sidebar>
 
-        {/* Pass search callback down to NavTop inside Main */}
-        <Main onSearch={setSearchText}>
-          {/* Future detail content goes here */}
+        {/* Main: shows search bar and details */}
+        <Main onSearch={handleSearch}>
+          {selected && (
+            <>
+              <MuseumTitle museum={selected} />
+              <MuseumDetails museum={selected} />
+            </>
+          )}
         </Main>
       </main>
     </>

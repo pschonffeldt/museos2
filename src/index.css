@@ -436,7 +436,8 @@ footer {
 
 /* Notification styles — add to src/index.css */
 
-.notification {
+.notification,
+.error {
   position: fixed;
   top: 1rem;
   right: 1rem;

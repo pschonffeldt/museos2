@@ -73,7 +73,7 @@ export function useMuseosSearch(
         }
       } catch (e: any) {
         if (!isCancelled) {
-          setError(e?.message ?? "Unknown error");
+          setError(e?.message ?? "Error desconocido...");
           setData([]);
         }
       } finally {

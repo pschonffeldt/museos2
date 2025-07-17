@@ -1,7 +1,12 @@
 // src/components/Sidebar.tsx
 import React from "react";
 
-export default function Sidebar({ children }: { children: React.ReactNode }) {
+interface SidebarProps {
+  children: React.ReactNode;
+  onSelect: (id: string) => void;
+}
+
+export default function Sidebar({ children, onSelect }: SidebarProps) {
   return (
     <nav className="nav-left">
       <div className="title-container">

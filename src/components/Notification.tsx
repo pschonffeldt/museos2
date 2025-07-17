@@ -8,19 +8,18 @@ interface NotificationProps {
 
 export default function Notification({
   message,
-  duration = 100000,
+  duration = 3000,
 }: NotificationProps) {
   const [visible, setVisible] = useState(false);
-
   useEffect(() => {
     setVisible(true);
-    const timeoutId = setTimeout(() => setVisible(false), duration);
-    return () => clearTimeout(timeoutId);
+    const timeout = setTimeout(() => setVisible(false), duration);
+    return () => clearTimeout(timeout);
   }, [duration]);
 
   return (
     <div className={`notification ${visible ? "enter" : "exit"}`}>
-      <p className="notification-text">{message}</p>
+      {message}
     </div>
   );
 }
