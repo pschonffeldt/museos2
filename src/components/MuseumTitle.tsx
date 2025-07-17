@@ -1,15 +1,15 @@
+// src/components/MuseumTitle.tsx
 import React from "react";
+import type { MuseumRecord } from "../lib/types";
 
-export default function MuseumTitle({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+interface MuseumTitleProps {
+  museum: MuseumRecord;
+}
+
+export default function MuseumTitle({ museum }: MuseumTitleProps) {
   return (
     <div className="details-title-container">
-      <h2 className="details-title">
-        Museo Nacional Aeronáutico y del Espacio
-      </h2>
+      <h2 className="details-title">{museum.museum_name}</h2>
     </div>
   );
 }

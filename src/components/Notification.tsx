@@ -12,10 +12,11 @@ export default function Notification({
 }: NotificationProps) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
+    // whenever message or duration changes, show notification
     setVisible(true);
     const timeout = setTimeout(() => setVisible(false), duration);
     return () => clearTimeout(timeout);
-  }, [duration]);
+  }, [message, duration]);
 
   return (
     <div className={`notification ${visible ? "enter" : "exit"}`}>
