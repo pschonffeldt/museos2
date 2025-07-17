@@ -35,6 +35,16 @@ body {
   --color-darkgreen: #4abf73;
   --color-red: #fae1e0;
   --color-darkred: #d8534e;
+
+  /* border radius */
+  /* All containers */
+  --base-radius: 0.2rem;
+  /* Notification */
+  --base-notification: 0.25rem;
+  /* Bards icon background */
+  --base-icon: 50%;
+  /* Scrollbar end */
+  --base-scroll: 0;
 }
 
 /* Utility classes */
@@ -134,7 +144,7 @@ body {
 
 .results::-webkit-scrollbar-thumb {
   background-color: var(--color-lightblue); /* Scroll thumb color */
-  border-radius: 0.25rem;
+  border-radius: var(--base-scroll);
 }
 
 .results::-webkit-scrollbar-thumb:hover {
@@ -152,7 +162,7 @@ body {
   justify-content: center;
   text-align: start;
   gap: 10px;
-  border-radius: 0.25rem;
+  border-radius: var(--base-radius);
   cursor: pointer;
 }
 
@@ -218,7 +228,7 @@ body {
   margin-left: 8px;
   height: 35px;
   width: 100px;
-  border-radius: 0.25rem;
+  border-radius: var(--base-radius);
   background-color: var(--color-lightblue);
   border: none;
   color: var(--color-white);
@@ -254,7 +264,7 @@ body {
 .nav-top-button {
   height: 35px;
   width: 100px;
-  border-radius: 0.25rem;
+  border-radius: var(--base-radius);
   background-color: var(--color-lightblue);
   border: none;
   color: var(--color-white);
@@ -308,7 +318,7 @@ body {
   background-color: var(--color-white);
   height: 120px;
   width: 25%;
-  border-radius: 0.25rem;
+  border-radius: var(--base-radius);
   padding: 15px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
 }
@@ -359,7 +369,7 @@ body {
   background-color: var(--color-lightblue);
   height: 50px;
   width: 50px;
-  border-radius: 50%; /* → perfect circle */
+  border-radius: var(--base-icon);
 }
 
 .museum-details-cards {
@@ -377,7 +387,7 @@ body {
   background-color: var(--color-white);
   height: 100%;
   gap: 20px;
-  border-radius: 0.25rem;
+  border-radius: var(--base-radius);
   padding: 15px;
   justify-content: space-between;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
@@ -415,20 +425,23 @@ body {
 .museum-space {
 }
 
-.museum-map {
-  background-color: #4abf73;
-  border-radius: 0.25rem;
-
+.pricing {
+  background-color: var(--color-lightblue);
+  border-radius: var(--base-radius);
+  padding: 20px;
+  color: white;
   width: 100%;
   height: 50%;
 }
 
-.museum-map-summary {
-  background-color: #d8534e;
-  border-radius: 0.25rem;
-
+.map-summary {
   width: 100%;
   height: 50%;
+}
+.map {
+  border-radius: var(--base-radius);
+  width: 100%;
+  height: 100%;
 }
 
 .utility-bar-button {
@@ -436,7 +449,7 @@ body {
   height: 35px;
   padding: 10px;
   width: 25%;
-  border-radius: 0.25rem;
+  border-radius: var(--base-radius);
   background-color: var(--color-lightblue);
   border: none;
   color: var(--color-white);
@@ -472,7 +485,7 @@ footer {
   top: 1rem;
   right: 1rem;
   background: var(--color-darkgreen);
-  border-radius: 0.5rem;
+  border-radius: var(--base-notification);
   padding: 0.75rem 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.094);
   opacity: 0;

@@ -50,8 +50,26 @@ export default function MuseumDetails({ museum }: MuseumDetailsProps) {
         </div>
       </div>
       <div className="museum-details-card-column u-c30">
-        <div className="museum-map"></div>
-        <div className="museum-map-summary"></div>
+        <div className="pricing">
+          <h3>Precios</h3>
+          <ul>
+            <li>Precio general</li>
+            <li>Precio 3ra edad</li>
+            <li>Precio niños</li>
+            <li>Precio vecinos</li>
+          </ul>
+          <h3>Precios</h3>
+          <ul>
+            <li>Domingo gratis</li>
+            <li>Sabado donacion</li>
+          </ul>
+        </div>
+        <div className="map-summary">
+          <iframe
+            className="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4064.115571787968!2d-70.6970931!3d-33.4870965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c4b7134669b3%3A0xbd188e837f500c2a!2sAv.%20Pedro%20Aguirre%20Cerda%205000%2C%209200000%20Cerrillos%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e1!3m2!1sen!2spe!4v1752794836090!5m2!1sen!2spe"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
