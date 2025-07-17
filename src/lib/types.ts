@@ -21,4 +21,5 @@ export interface MuseumRecord {
   museum_collections_description: string;
   museum_complete: boolean;
   museum_directions: string;
+  museum_space_description: string;
 }

@@ -2,6 +2,7 @@
 import React from "react";
 import NavTop from "./NavTop";
 import Details from "./Details";
+import Footer from "./Footer";
 
 interface MainProps {
   onSearch: (query: string) => void;
@@ -13,6 +14,7 @@ export default function Main({ onSearch, children }: MainProps) {
     <div className="content">
       <NavTop onSearch={onSearch} />
       <Details>{children}</Details>
+      <Footer />
     </div>
   );
 }

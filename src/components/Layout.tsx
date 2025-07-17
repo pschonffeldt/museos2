@@ -7,6 +7,7 @@ import MuseumTitle from "./MuseumTitle";
 import MuseumDetails from "./MuseumDetails";
 import { createClient } from "@supabase/supabase-js";
 import MuseumCards from "./MuseumCards";
+import Footer from "./Footer";
 
 // ← Use Vite’s env vars (no process.env here)
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string;
@@ -74,8 +75,8 @@ export default function Layout() {
         <Main onSearch={handleSearch}>
           {selected && (
             <>
-              <MuseumCards museum={selected} />
               <MuseumTitle museum={selected} />
+              <MuseumCards museum={selected} />
               <MuseumDetails museum={selected} />
             </>
           )}

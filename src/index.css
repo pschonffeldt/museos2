@@ -24,12 +24,13 @@ body {
   /* colors */
   --color-white: #ffffff;
   --color-lightgray: #f7f9fc;
-  --color-gray: #e2e8ed;
+  --color-gray: #f6f7fa;
   --color-darkgray: #6c757d;
   --color-darkestgray: #485056;
   --color-darkblue: #283042;
   --color-middarkblue: #333b52;
   --color-lightblue: #407fea;
+  --color-ultralightblue: #e0eafb;
   --color-green: #e1f3e7;
   --color-darkgreen: #4abf73;
   --color-red: #fae1e0;
@@ -46,6 +47,10 @@ body {
 
 .u-thin {
   font-weight: 400;
+}
+
+.u-font-16 {
+  font-size: 14px;
 }
 
 /* Container module */
@@ -149,6 +154,10 @@ body {
   gap: 10px;
   border-radius: 0.25rem;
   cursor: pointer;
+}
+
+.result-container:hover {
+  transform: scale(1.02);
 }
 
 .result-name {
@@ -267,6 +276,7 @@ body {
 
 .details-container-layout {
   padding: 20px;
+  margin-bottom: 50px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -296,11 +306,11 @@ body {
   display: flex;
   flex-direction: row;
   background-color: var(--color-white);
-  height: 150px;
+  height: 120px;
   width: 25%;
   border-radius: 0.25rem;
   padding: 15px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
 }
 
 .museum-summary-card-text {
@@ -312,14 +322,16 @@ body {
 }
 
 .museum-summary-card-title {
+  padding-bottom: 4px;
+  color: var(--color-darkestgray);
 }
 
-.museum-summary-card-title::after {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 2px;
-  background-color: var(--color-darkblue);
+.museum-summary-card-details {
+}
+
+.museum-summary-card-detail {
+  font-size: 12px;
+  color: var(--color-darkestgray);
 }
 
 .museum-summary-card-icon {
@@ -333,11 +345,21 @@ body {
   gap: 10px;
 }
 
+.icon {
+  display: block; /* make sizing more predictable */
+  width: 50%; /* or an explicit px/em/rem if you prefer */
+  height: 50%;
+  color: var(--color-white); /* still works for SVG fills */
+}
+
 .summary-card-icon {
-  background-color: black;
-  height: 45px;
-  width: 45px;
-  border-radius: 100px;
+  display: flex; /* make this a flex‐box container */
+  align-items: center; /* vertically center its child */
+  justify-content: center; /* horizontally center its child */
+  background-color: var(--color-lightblue);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%; /* → perfect circle */
 }
 
 .museum-details-cards {
@@ -358,7 +380,7 @@ body {
   border-radius: 0.25rem;
   padding: 15px;
   justify-content: space-between;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
 }
 
 .museum-description-container {
@@ -368,6 +390,13 @@ body {
   gap: 50px;
   height: 100%;
   width: 100%;
+}
+
+.museum-description-content {
+  color: var(--color-darkestgray);
+}
+.museum-description-title {
+  color: var(--color-darkestgray);
 }
 
 .museum-description-utility-container {
@@ -422,11 +451,12 @@ body {
 .footer-text {
   text-align: right;
   padding-right: 20px;
+  font-size: 12px;
 }
 
 footer {
-  background-color: var(--color-middarkblue);
-  box-shadow: 0 -0.5rem 5rem 6 rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
+  box-shadow: 0 -3px 10px rgb(0 0 0 / 0.1);
 }
 
 .loading-msg {

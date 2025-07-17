@@ -20,8 +20,6 @@ export function useMuseosSearch(
   columns: string[] = [
     "id",
     "museum_name",
-    "museum_description",
-    "museum_collections_description",
     "museum_country",
     "museum_region",
     "museum_city",
@@ -34,8 +32,11 @@ export function useMuseosSearch(
     "museum_parking",
     "museum_public_transpot",
     "museum_website",
+    "museum_description",
+    "museum_collections_description",
     "museum_complete",
     "museum_directions",
+    "museum_space_description",
   ]
 ) {
   const [data, setData] = useState<MuseumRecord[]>([]);

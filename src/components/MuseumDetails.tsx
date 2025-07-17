@@ -12,16 +12,26 @@ export default function MuseumDetails({ museum }: MuseumDetailsProps) {
       <div className="museum-details-card-column u-c70">
         <div className="museum-description-container">
           <div className="museum-description">
-            <h3>Descripción del museo:</h3>
-            <p>{museum.museum_description}</p>
+            <h3 className="museum-description-title">Descripción del museo:</h3>
+            <p className="museum-description-content">
+              {museum.museum_description}
+            </p>
           </div>
           <div className="museum-collection">
-            <h3>Descripción de la colección:</h3>
-            <p>{museum.museum_collections_description}</p>
+            <h3 className="museum-description-title">
+              Descripción de la colección:
+            </h3>
+            <p className="museum-description-content">
+              {museum.museum_collections_description}
+            </p>
           </div>
           <div className="museum-space">
-            <h3>Descripción del espacio del museo:</h3>
-            <p>AGREGAR ESTO A SUPABASE</p>
+            <h3 className="museum-description-title">
+              Descripción del espacio del museo:
+            </h3>
+            <p className="museum-description-content">
+              {museum.museum_space_description}
+            </p>
           </div>
         </div>
         <div className="museum-description-utility-container">
