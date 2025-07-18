@@ -67,7 +67,7 @@ export default function MuseumDetails({ museum }: MuseumDetailsProps) {
         <div className="map-summary">
           <iframe
             className="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4064.115571787968!2d-70.6970931!3d-33.4870965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c4b7134669b3%3A0xbd188e837f500c2a!2sAv.%20Pedro%20Aguirre%20Cerda%205000%2C%209200000%20Cerrillos%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e1!3m2!1sen!2spe!4v1752794836090!5m2!1sen!2spe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4066.7403304028717!2d-70.6344175!3d-33.4311212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c59017cb616d%3A0x4efb4711f2a9a116!2sLa%20Chascona!5e1!3m2!1sen!2spe!4v1752795902221!5m2!1sen!2spe"
           ></iframe>
         </div>
       </div>

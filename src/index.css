@@ -319,7 +319,6 @@ body {
   height: 120px;
   width: 25%;
   border-radius: var(--base-radius);
-  padding: 15px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
 }
 
@@ -334,6 +333,14 @@ body {
 .museum-summary-card-title {
   padding-bottom: 4px;
   color: var(--color-darkestgray);
+}
+.museum-summary-card-title::after {
+  content: "";
+  display: block;
+  width: content;
+  height: 2px;
+  background-color: var(--color-lightblue);
+  margin-top: 4px;
 }
 
 .museum-summary-card-details {
@@ -407,6 +414,7 @@ body {
 }
 .museum-description-title {
   color: var(--color-darkestgray);
+  font-size: 20px;
 }
 
 .museum-description-utility-container {
@@ -436,12 +444,12 @@ body {
 
 .pricing-list {
   text-decoration: none;
-  font-size: 26px;
+  font-size: 20px;
 }
 .pricing-list:after {
   content: "";
   display: block;
-  width: 10%;
+  width: content;
   height: 2px;
   background-color: var(--color-lightblue);
   margin-top: 4px;
@@ -460,6 +468,7 @@ li {
   border-radius: var(--base-radius);
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 .utility-bar-button {

@@ -41,6 +41,7 @@ export default function Layout() {
       setNotification("Error al buscar...");
       return;
     }
+    // pasa lago acca
     if (data.length === 0) {
       setNotification("No hay resultados relacionados");
     } else {

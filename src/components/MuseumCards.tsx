@@ -46,6 +46,7 @@ export default function MuseumCards({ museum, children }: MuseumCardsProps) {
           <p className="museum-summary-card-detail">
             {museum.museum_ownership_type}
           </p>
+          <p className="museum-summary-card-detail">Descuentos aplicables</p>
         </div>
         <div className="museum-summary-card-icon">
           <div className="summary-card-icon">
