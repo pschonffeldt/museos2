@@ -12,7 +12,7 @@ textarea {
 
 body {
   font-family: "Inter", sans-serif;
-  overflow: hidden;
+  overflow: auto;
 }
 
 #root {
@@ -281,7 +281,38 @@ body {
   width: 100%;
   height: 100vh;
   background-color: var(--color-gray);
-  overflow-y: auto; /* ← enable the scrollbar when needed */
+  overflow-y: auto;
+}
+
+/* .results {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+  background-color: var(--color-middarkblue);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+} */
+
+/* Scrollbar styling */
+
+.details-container::-webkit-scrollbar {
+  width: 8px; /* Vertical scrollbar width */
+  height: 8px; /* Horizontal scrollbar height, if applicable */
+}
+
+.details-container::-webkit-scrollbar-track {
+  background: var(--color-middarkblue); /* Track background */
+}
+
+.details-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-lightblue); /* Scroll thumb color */
+  border-radius: var(--base-scroll);
+}
+
+.details-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-darkblue); /* Color on hover */
 }
 
 .details-container-layout {
@@ -337,7 +368,7 @@ body {
 .museum-summary-card-title::after {
   content: "";
   display: block;
-  width: content;
+  width: 100%;
   height: 2px;
   background-color: var(--color-lightblue);
   margin-top: 4px;
@@ -381,9 +412,8 @@ body {
 
 .museum-details-cards {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* align columns at the top */
   flex-direction: row;
-  height: 100%;
   width: 100%;
   gap: 20px;
 }
@@ -392,21 +422,29 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--color-white);
-  height: 100%;
   gap: 20px;
   border-radius: var(--base-radius);
   padding: 15px;
-  justify-content: space-between;
+  /* remove height, let the column grow with content */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+}
+
+.museum-details-card-column-r {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  gap: 20px;
+  border-radius: var(--base-radius);
+  padding: 15px;
+  min-height: 800px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
 }
 
 .museum-description-container {
   display: flex;
   flex-direction: column;
-  /* justify-content: start; */
   gap: 50px;
-  height: 100%;
-  width: 100%;
+  /* remove height: 100%; */
 }
 
 .museum-description-content {
@@ -437,6 +475,7 @@ body {
   border-radius: var(--base-radius);
   color: var(--color-darkestgray);
   width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 25px;

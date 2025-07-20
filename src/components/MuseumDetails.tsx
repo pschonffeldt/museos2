@@ -49,7 +49,7 @@ export default function MuseumDetails({ museum }: MuseumDetailsProps) {
           </button>
         </div>
       </div>
-      <div className="museum-details-card-column u-c30">
+      <div className="museum-details-card-column-r u-c30">
         <div className="pricing">
           <h3 className="pricing-list">Precios:</h3>
           <ul>
