@@ -1,5 +1,5 @@
 // src/components/Layout.tsx
-import React, { useState } from "react";
+import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Main from "./Main";
 import Notification from "./Notification";

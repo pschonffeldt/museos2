@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 // import { createClient, SupabaseClient } from "@supabase/supabase-js";
-import type { SupabaseClient } from "@supabase/supabase-js";
-import { supabase } from "./supabaseClient";
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+// import { supabase } from "./supabaseClient";
 import type { MuseumRecord } from "./types";
 
 // Supabase config
@@ -79,7 +79,7 @@ export function useMuseosSearch(
           setError(supaError.message);
           setData([]);
         } else {
-          setData((supaData ?? []) as MuseumRecord[]);
+          setData((supaData ?? []) as unknown as MuseumRecord[]);
         }
       } catch (e: any) {
         if (!isCancelled) {
