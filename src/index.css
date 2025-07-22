@@ -440,39 +440,8 @@ body {
   gap: 20px;
   border-radius: var(--base-radius);
   padding: 15px;
-  min-height: 800px;
+  height: 700px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-}
-
-.museum-description-container {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  /* remove height: 100%; */
-}
-
-.museum-description-content {
-  color: var(--color-darkestgray);
-}
-.museum-description-title {
-  color: var(--color-darkestgray);
-  font-size: 20px;
-}
-
-.museum-description-utility-container {
-  display: flex;
-  flex-direction: row;
-  height: 50px;
-  width: 100%;
-}
-
-.museum-description {
-}
-
-.museum-collection {
-}
-
-.museum-space {
 }
 
 .pricing {
@@ -505,13 +474,44 @@ li {
 
 .map-summary {
   width: 100%;
-  height: 100%;
+  height: 500px;
 }
 .map {
   border-radius: var(--base-radius);
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.museum-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  /* remove height: 100%; */
+}
+
+.museum-description-content {
+  color: var(--color-darkestgray);
+}
+.museum-description-title {
+  color: var(--color-darkestgray);
+  font-size: 20px;
+}
+
+.museum-description-utility-container {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 100%;
+}
+
+.museum-description {
+}
+
+.museum-collection {
+}
+
+.museum-space {
 }
 
 .utility-bar-button {
