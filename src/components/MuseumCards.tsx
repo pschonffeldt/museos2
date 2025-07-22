@@ -77,15 +77,12 @@ export default function MuseumCards({ museum, children }: MuseumCardsProps) {
       {/* Access Card */}
       <div className="museum-summary-card">
         <div className="museum-summary-card-text">
-          <h3 className="museum-summary-card-title">Acceso</h3>
+          <h3 className="museum-summary-card-title">Transporte</h3>
+          <p className="museum-summary-card-detail">
+            {museum.museum_transport_type}, {museum.museum_transport_line}
+          </p>
           <p className="museum-summary-card-detail">
             {museum.museum_public_transpot}
-          </p>
-          <p className="museum-summary-card-detail">
-            {museum.museum_transport_type}
-          </p>
-          <p className="museum-summary-card-detail">
-            {museum.museum_transport_line}
           </p>
         </div>
         <div className="museum-summary-card-icon">
