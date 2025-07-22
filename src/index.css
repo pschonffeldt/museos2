@@ -318,9 +318,6 @@ body {
   gap: 20px;
 }
 
-.details-title-container {
-}
-
 .details-title {
   color: var(--color-darkestgray);
   font-weight: 400;
@@ -368,9 +365,6 @@ body {
   height: 2px;
   /* background-color: var(--color-lightblue); */
   margin-top: 4px;
-}
-
-.museum-summary-card-details {
 }
 
 .museum-summary-card-detail {
@@ -499,15 +493,6 @@ li {
   width: 100%;
 }
 
-.museum-description {
-}
-
-.museum-collection {
-}
-
-.museum-space {
-}
-
 .utility-bar-button {
   margin-right: 16px;
   height: 35px;
@@ -534,9 +519,6 @@ li {
 footer {
   background-color: var(--color-white);
   box-shadow: 0 -3px 10px rgb(0 0 0 / 0.1);
-}
-
-.loading-msg {
 }
 
 /* src/components/Notification.css */
@@ -572,9 +554,6 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: end;
-}
-
-.notification-searching {
 }
 
 .notification-notfound {
