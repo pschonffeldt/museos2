@@ -5,7 +5,8 @@ import Main from "./Main";
 import Notification from "./Notification";
 import MuseumTitle from "./MuseumTitle";
 import MuseumDetails from "./MuseumDetails";
-import { createClient } from "@supabase/supabase-js";
+// import { createClient } from "@supabase/supabase-js";
+import { supabase } from "../lib/supabaseClient";
 import MuseumCards from "./MuseumCards";
 import Footer from "./Footer";
 
