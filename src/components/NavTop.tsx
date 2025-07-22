@@ -19,7 +19,7 @@ export default function NavTop({ onSearch }: NavTopProps) {
         <form className="search-bar-form" onSubmit={handleSubmit}>
           <input
             className="search-bar-form-input"
-            placeholder="Busca museos por su nombre o ver todos..."
+            placeholder="Busca museos por nombre o pulsa el botón para vertodos"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />

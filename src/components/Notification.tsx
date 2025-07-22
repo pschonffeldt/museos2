@@ -18,8 +18,15 @@ export default function Notification({
     return () => clearTimeout(timeout);
   }, [message, duration]);
 
+  const extraClass =
+    message === "Buscando..."
+      ? "notification-searching"
+      : message === "No hay resultados relacionados"
+      ? "notification-notfound"
+      : "";
+
   return (
-    <div className={`notification ${visible ? "enter" : "exit"}`}>
+    <div className={`notification ${extraClass} ${visible ? "enter" : "exit"}`}>
       {message}
     </div>
   );
