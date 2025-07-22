@@ -54,18 +54,14 @@ export default function MuseumDetails({ museum }: MuseumDetailsProps) {
         <div className="pricing">
           <h3 className="pricing-list">Precios:</h3>
           <ul>
-            <li>Precio general: $3.000</li>
-            <li>Precio 3ra edad: $2.000</li>
+            <li>{museum.museum_price}</li>
           </ul>
           <h3 className="pricing-list">Descuentos especiales:</h3>
           <ul>
-            <li>Niños gratis</li>
-            <li>Vecinos gratis (tarjeta vecino)</li>
-            <li>Domingo gratis</li>
-            <li>Sabado donacion</li>
+            <li>{museum.museum_discounts}</li>
           </ul>
         </div>
-        <div className="museum-summary  ">
+        <div className="map-summary">
           <iframe
             className="map"
             src={museum.museum_map_url} // or museum.museum_transport_line
