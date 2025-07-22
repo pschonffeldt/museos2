@@ -33,7 +33,8 @@ export default function Layout() {
       .ilike("museum_name", `%${query}%`);
 
     if (error) {
-      setNotification("Error al buscar...");
+      console.error("Supabase error:", error);
+      setNotification(error.message);
       return;
     }
 
