@@ -22,4 +22,11 @@ export interface MuseumRecord {
   museum_complete: boolean;
   museum_directions: string;
   museum_space_description: string;
+  museum_pricingstyle: string;
+  museum_price: string;
+  museum_discount_availability: string;
+  museum_discounts: string;
+  museum_transport_type: string;
+  museum_map_url: string;
+  museum_transport_line: string;
 }

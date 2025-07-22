@@ -39,6 +39,13 @@ export function useMuseosSearch(
     "museum_complete",
     "museum_directions",
     "museum_space_description",
+    "museum_pricingstyle",
+    "museum_price",
+    "museum_discount_availability",
+    "museum_discounts",
+    "museum_transport_type",
+    "museum_map_url",
+    "museum_transport_line",
   ]
 ) {
   const [data, setData] = useState<MuseumRecord[]>([]);
