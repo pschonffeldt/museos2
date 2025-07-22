@@ -86,14 +86,13 @@ body {
 .nav-left {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  min-height: 0; /* ← this is the key for the parent */
+  min-height: 0;
   width: 20vw;
   min-width: 320px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-middarkblue);
+  /* background-color: var(--color-middarkblue); */
 }
 
 /* Left nav bar title */
@@ -103,18 +102,19 @@ body {
   align-items: center;
   justify-content: center;
   height: 75px;
-  background-color: var(--color-middarkblue);
+  background-color: var(--color-white);
+  z-index: 10;
 }
 
 .title {
-  color: var(--color-white);
+  color: var(--color-darkblue);
 }
 .title::after {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--color-white);
+  /* background-color: var(--color-white); */
   margin-top: 4px;
 }
 
