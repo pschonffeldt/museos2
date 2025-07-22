@@ -46,7 +46,11 @@ export default function MuseumCards({ museum, children }: MuseumCardsProps) {
           <p className="museum-summary-card-detail">
             {museum.museum_ownership_type}
           </p>
-          <p className="museum-summary-card-detail">Descuentos aplicables</p>
+          <p className="museum-summary-card-detail">{museum.museum_price}</p>
+          {/* <p className="museum-summary-card-detail">Descuentos aplicables</p> */}
+          <p className="museum-summary-card-detail">
+            {museum.museum_discount_availability}
+          </p>
         </div>
         <div className="museum-summary-card-icon">
           <div className="summary-card-icon">
@@ -76,6 +80,12 @@ export default function MuseumCards({ museum, children }: MuseumCardsProps) {
           <h3 className="museum-summary-card-title">Acceso</h3>
           <p className="museum-summary-card-detail">
             {museum.museum_public_transpot}
+          </p>
+          <p className="museum-summary-card-detail">
+            {museum.museum_transport_type}
+          </p>
+          <p className="museum-summary-card-detail">
+            {museum.museum_transport_line}
           </p>
         </div>
         <div className="museum-summary-card-icon">
