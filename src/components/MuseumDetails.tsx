@@ -50,8 +50,6 @@ export default function MuseumDetails({ museum }: MuseumDetailsProps) {
         </div>
       </div>
 
-      {/* Aqui estamos trabajando */}
-
       <div className="museum-details-card-column-r u-c30">
         <div className="pricing">
           <h3 className="pricing-list">Precios:</h3>
@@ -67,10 +65,12 @@ export default function MuseumDetails({ museum }: MuseumDetailsProps) {
             <li>Sabado donacion</li>
           </ul>
         </div>
-        <div className="map-summary">
+        <div className="museum-summary  ">
           <iframe
             className="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4066.7403304028717!2d-70.6344175!3d-33.4311212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c59017cb616d%3A0x4efb4711f2a9a116!2sLa%20Chascona!5e1!3m2!1sen!2spe!4v1752795902221!5m2!1sen!2spe"
+            src={museum.museum_map_url} // or museum.museum_transport_line
+            // loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
