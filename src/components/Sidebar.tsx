@@ -18,7 +18,7 @@ export default function Sidebar({ children }: SidebarProps) {
   return (
     <nav className="nav-left">
       <div className="title-container">
-        <h1 className="title">Buscador de Museos</h1>
+        <h1 className="title">Listado de Museos</h1>
       </div>
 
       {/* Results list area */}
