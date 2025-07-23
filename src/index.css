@@ -1,3 +1,6 @@
+/* =========================
+   Global resets & variables
+   ========================= */
 *,
 *::before,
 *::after {
@@ -7,7 +10,7 @@
 }
 
 textarea {
-  all: unset;
+  all: unset; /* Remove all default browser styles on <textarea> */
 }
 
 body {
@@ -21,7 +24,7 @@ body {
   justify-content: flex-start;
   height: 100vh;
 
-  /* colors */
+  /* -------- CSS Variables (colors, radii) -------- */
   --color-white: #ffffff;
   --color-lightgray: #f7f9fc;
   --color-gray: #f6f7fa;
@@ -37,21 +40,16 @@ body {
   --color-red: #fae1e0;
   --color-darkred: #d8534e;
 
-  /* border radius */
-  /* All containers */
-  --base-radius: 0.2rem;
-  /* Notification */
-  --base-notification: 0.25rem;
-  /* Bards icon background */
-  --base-icon: 50%;
-  /* Scrollbar end */
-  --base-scroll: 0;
+  /* Border radii */
+  --base-radius: 0.2rem; /* Generic containers */
+  --base-notification: 0.25rem; /* Notification capsule */
+  --base-icon: 50%; /* Perfect circle for icons */
+  --base-scroll: 0; /* Scrollbar thumb radius */
 }
 
-/* Utility classes */
-
-/* Utility classes - Text color */
-
+/* ======================
+   Utility text helpers
+   ====================== */
 .u-darkestgray {
   color: var(--color-darkestgray);
 }
@@ -64,8 +62,9 @@ body {
   font-size: 14px;
 }
 
-/* Container module */
-
+/* ===================
+   App main container
+   =================== */
 .container {
   width: 100vw;
   height: 100vh;
@@ -73,8 +72,7 @@ body {
   flex-direction: row;
 }
 
-/* Utility classes - Width */
-
+/* Width helpers */
 .u-c70 {
   width: 70%;
 }
@@ -82,8 +80,9 @@ body {
   width: 30%;
 }
 
-/* Left nav bar */
-
+/* ======================
+   Left navigation column
+   ====================== */
 .nav-left {
   display: flex;
   flex-direction: column;
@@ -91,18 +90,15 @@ body {
   width: 20vw;
   min-width: 360px;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   /* background-color: var(--color-middarkblue); */
 }
 
-/* Left nav bar title */
-
+/* ---- Title area ---- */
 .title-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75px;
+  height: 65px;
   background-color: var(--color-white);
   z-index: 10;
 }
@@ -119,12 +115,11 @@ body {
   margin-top: 4px;
 }
 
-/* Left nav bar results list */
-
+/* ---- Results list ---- */
 .results {
-  flex: 1 1 0; /* fill remaining space under the 75px header */
-  min-height: 0; /* allow it to collapse below its children’s full height */
-  overflow-y: auto; /* ← enable the scrollbar when needed */
+  flex: 1 1 0; /* Fill remaining space under the header */
+  min-height: 0; /* Let it shrink with overflow */
+  overflow-y: scroll; /* Enable scrolling */
   background-color: var(--color-middarkblue);
   display: flex;
   flex-direction: column;
@@ -132,26 +127,39 @@ body {
   padding: 10px;
 }
 
-/* Scrollbar styling */
-
+/* Custom scrollbar for results */
 .results::-webkit-scrollbar {
-  width: 8px; /* Vertical scrollbar width */
-  height: 8px; /* Horizontal scrollbar height, if applicable */
+  width: 8px;
+  height: 8px;
 }
-
 .results::-webkit-scrollbar-track {
-  background: var(--color-middarkblue); /* Track background */
+  background: var(--color-middarkblue);
 }
-
 .results::-webkit-scrollbar-thumb {
-  background-color: var(--color-lightblue); /* Scroll thumb color */
+  background-color: var(--color-lightblue);
   border-radius: var(--base-scroll);
 }
-
 .results::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-darkblue); /* Color on hover */
+  background-color: var(--color-darkblue);
 }
 
+/* Empty-state / instructions card */
+.result-instructions {
+  padding: 10px;
+  background-color: var(--color-gray);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-align: start;
+  gap: 10px;
+  border-radius: var(--base-radius);
+  cursor: pointer;
+}
+
+/* One search result row */
 .result-container {
   padding: 10px;
   background-color: var(--color-white);
@@ -166,7 +174,6 @@ body {
   border-radius: var(--base-radius);
   cursor: pointer;
 }
-
 .result-container:hover {
   transform: scale(1.02);
 }
@@ -179,20 +186,22 @@ body {
   font-weight: bold;
 }
 
-/* Top nav bar */
-
+/* ======================
+   Right column container
+   ====================== */
 .content {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
+/* ---- Top nav bar ---- */
 .nav-top {
   display: flex;
   flex-direction: row;
   justify-content: start;
   width: 100%;
-  height: 75px;
+  height: 65px;
   background-color: var(--color-white);
   z-index: 1;
   box-shadow: 0 0 2rem 0 rgba(41, 48, 66, 0.1);
@@ -201,11 +210,11 @@ body {
 .search-bar-container {
   align-content: center;
   width: 40%;
-  height: 75px;
+  height: 65px;
 }
 
 .search-bar-form {
-  width: 500px;
+  width: 700px;
   padding-left: 20px;
   display: flex;
   flex-direction: row;
@@ -232,17 +241,16 @@ body {
   background-color: var(--color-lightblue);
   border: none;
   color: var(--color-white);
-  /* transition: all 0.1s ease-in-out; */
   transform: scale(1.02);
 }
-
 .search-bar-button:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
+/* Unused? (duplicate width) */
 .search-bar {
   display: flex;
-  height: 75px;
+  height: 65px;
   width: 100%;
   align-items: center;
   background-color: var(--color-white);
@@ -255,17 +263,15 @@ body {
   font-size: 16px;
 }
 
-/* Top nav bar Action buttons */
-
+/* ---- Top nav bar right-side buttons ---- */
 .nav-top-buttons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  height: 75px;
+  height: 65px;
   padding-right: 50px;
 }
-
 .nav-top-button {
   height: 35px;
   width: 100px;
@@ -275,13 +281,13 @@ body {
   color: var(--color-white);
   transition: all 0.1s ease-in-out;
 }
-
 .nav-top-button:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-/* Details container */
-
+/* ====================
+   Details (right pane)
+   ==================== */
 .details-container {
   width: 100%;
   height: 100vh;
@@ -289,26 +295,23 @@ body {
   overflow-y: auto;
 }
 
-/* Scrollbar styling */
-
+/* Custom scrollbar for details */
 .details-container::-webkit-scrollbar {
-  width: 8px; /* Vertical scrollbar width */
-  height: 8px; /* Horizontal scrollbar height, if applicable */
+  width: 8px;
+  height: 8px;
 }
-
 .details-container::-webkit-scrollbar-track {
-  background: var(--color-middarkblue); /* Track background */
+  background: var(--color-middarkblue);
 }
-
 .details-container::-webkit-scrollbar-thumb {
-  background-color: var(--color-lightblue); /* Scroll thumb color */
+  background-color: var(--color-lightblue);
   border-radius: var(--base-scroll);
 }
-
 .details-container::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-darkblue); /* Color on hover */
+  background-color: var(--color-darkblue);
 }
 
+/* Grid container for detail sections */
 .details-container-layout {
   display: grid;
   grid-auto-rows: auto;
@@ -316,14 +319,12 @@ body {
   padding: 20px;
 }
 
+/* Title row of the details section */
 .details-title-container {
   display: flex;
-  align-items: flex-end; /* keep text anchored at the bottom */
-  min-height: 36px; /* pick a value that fits your tallest one-liner */
-  /* margin: 0; */
-  /* padding: 10px 0; */
+  align-items: flex-end; /* anchor text to the bottom */
+  min-height: 36px; /* consistent minimum height */
 }
-
 .details-title {
   margin: 0;
   color: var(--color-darkestgray);
@@ -331,13 +332,9 @@ body {
   line-height: 1.25;
 }
 
-/* Control the gap to the next section explicitly */
-.details-title-container + .museum-summary-cards {
-  /* margin-top: 20px; */
-}
-
-/* Summary cards */
-
+/* ==================
+   Summary cards row
+   ================== */
 .museum-summary-cards {
   display: flex;
   align-items: center;
@@ -347,6 +344,7 @@ body {
   gap: 20px;
 }
 
+/* One summary card */
 .museum-summary-card {
   display: flex;
   flex-direction: row;
@@ -364,10 +362,7 @@ body {
   height: 100%;
   width: 70%;
   padding: 15px;
-  /* background-color: var(--color-darkred); */
-  /* border: #283042 solid 4px; */
 }
-
 .museum-summary-card-title {
   padding-bottom: 4px;
   color: var(--color-darkestgray);
@@ -380,7 +375,6 @@ body {
   background-color: var(--color-lightblue);
   margin-top: 4px;
 }
-
 .museum-summary-card-detail {
   font-size: 12px;
   color: var(--color-darkestgray);
@@ -395,35 +389,37 @@ body {
   width: 30%;
   padding: 15px;
   gap: 10px;
-  /* background-color: #4abf73; */
-  /* border: #283042 solid 4px; */
 }
 
 .icon {
-  display: block; /* make sizing more predictable */
-  width: 50%; /* or an explicit px/em/rem if you prefer */
+  display: block; /* predictable sizing */
+  width: 50%;
   height: 50%;
-  color: var(--color-white); /* still works for SVG fills */
+  color: var(--color-white);
 }
 
 .summary-card-icon {
-  display: flex; /* make this a flex‐box container */
-  align-items: center; /* vertically center its child */
-  justify-content: center; /* horizontally center its child */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--color-lightblue);
   height: 50px;
   width: 50px;
   border-radius: var(--base-icon);
 }
 
+/* ========================
+   Long museum details area
+   ======================== */
 .museum-details-cards {
   display: flex;
-  align-items: flex-start; /* align columns at the top */
+  align-items: flex-start;
   flex-direction: row;
   width: 100%;
   gap: 20px;
 }
 
+/* Left column (text blocks) */
 .museum-details-card-column {
   display: flex;
   flex-direction: column;
@@ -431,10 +427,10 @@ body {
   gap: 20px;
   border-radius: var(--base-radius);
   padding: 15px;
-  /* remove height, let the column grow with content */
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
 }
 
+/* Right column (pricing + map) */
 .museum-details-card-column-r {
   display: flex;
   flex-direction: column;
@@ -442,10 +438,11 @@ body {
   gap: 20px;
   border-radius: var(--base-radius);
   padding: 15px;
-  height: 500px;
+  height: 500px; /* fixed height to align with something? consider auto */
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
 }
 
+/* Pricing block */
 .pricing {
   border-radius: var(--base-radius);
   color: var(--color-white);
@@ -471,11 +468,12 @@ body {
 }
 
 li {
-  list-style-type: none; /* turn off the marker */
+  list-style-type: none;
   font-size: 16px;
   color: var(--color-darkestgray);
 }
 
+/* Map embed wrapper */
 .map-summary {
   width: 100%;
   height: 500px;
@@ -485,16 +483,14 @@ li {
   width: 100%;
   height: 100%;
   border: none;
-  /* transform: translateY(-20px); */
 }
 
+/* Description blocks */
 .museum-description-container {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  /* remove height: 100%; */
 }
-
 .museum-description-content {
   color: var(--color-darkestgray);
 }
@@ -503,13 +499,13 @@ li {
   font-size: 20px;
 }
 
+/* Utility button row */
 .museum-description-utility-container {
   display: flex;
   flex-direction: row;
   height: 50px;
   width: 100%;
 }
-
 .utility-bar-button {
   margin-right: 16px;
   height: 35px;
@@ -522,11 +518,13 @@ li {
   transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
-
 .utility-bar-button:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
+/* =============
+   Footer styles
+   ============= */
 .footer-text {
   text-align: right;
   padding-right: 20px;
@@ -538,10 +536,16 @@ footer {
   box-shadow: 0 -3px 10px rgb(0 0 0 / 0.1);
 }
 
-/* src/components/Notification.css */
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
 
-/* Notification styles — add to src/index.css */
-
+/* =========================
+   Notification (toast) UI
+   ========================= */
 .notification,
 .error {
   position: fixed;
@@ -555,7 +559,7 @@ footer {
   color: white;
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 1s ease;
-  z-index: 9999; /* make sure it sits above everything */
+  z-index: 9999; /* Above everything */
 }
 .notification.enter {
   opacity: 1;
@@ -566,13 +570,7 @@ footer {
   transform: translateY(-20px);
 }
 
-.footer-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: end;
-}
-
+/* Variant when there are no results */
 .notification-notfound {
   background-color: var(--color-darkred);
 }
