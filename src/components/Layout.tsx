@@ -8,6 +8,24 @@ import MuseumTitle from "./MuseumTitle";
 import MuseumDetails from "./MuseumDetails";
 import MuseumCards from "./MuseumCards";
 import { supabase } from "../lib/supabaseClient";
+import {
+  AvatarIcon,
+  BorderStyleIcon,
+  BoxIcon,
+  ChatBubbleIcon,
+  CodeIcon,
+  ColumnsIcon,
+  FileTextIcon,
+  GearIcon,
+  Half2Icon,
+  HeightIcon,
+  ListBulletIcon,
+  LoopIcon,
+  MaskOffIcon,
+  MixIcon,
+  RowsIcon,
+  RulerSquareIcon,
+} from "@radix-ui/react-icons";
 
 /**
  * Top‑level page layout.
@@ -89,6 +107,40 @@ export default function Layout() {
       {notification && <Notification message={notification} duration={delay} />}
 
       <main className="container">
+        {/* Thin left COLUMN: Sidebar with features */}
+
+        <div className="thin-nav">
+          {/* .thin-nav-toolkit container */}
+
+          <div className="thin-nav-toolkit">
+            <div className="thin-nav-tools">
+              <div className="feature-badge">
+                <h2 className="feature-badge-letter">L</h2>
+              </div>
+              <div className="feature-badge">
+                <h2 className="feature-badge-letter">M</h2>
+              </div>
+              <div className="feature-badge">
+                <h2 className="feature-badge-letter">F</h2>
+              </div>
+              <div className="feature-badge">
+                <h2 className="feature-badge-letter">L</h2>
+              </div>
+              <div className="feature-badge">
+                <h2 className="feature-badge-letter">R </h2>
+              </div>
+              <div className="feature-badge">
+                <h2 className="feature-badge-letter">R </h2>
+              </div>
+            </div>
+          </div>
+
+          <div className="thin-nav-user">
+            <AvatarIcon className="thin-icon"></AvatarIcon>
+            <GearIcon className="thin-icon"></GearIcon>
+          </div>
+        </div>
+
         {/* LEFT COLUMN: Sidebar with search results */}
         <Sidebar
           // The Sidebar tells us which museum was clicked by passing its id
