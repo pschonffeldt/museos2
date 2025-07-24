@@ -4,6 +4,7 @@ import type { MuseumRecord } from "../lib/types";
 import {
   DrawingPinIcon,
   EnterIcon,
+  PaperPlaneIcon,
   SketchLogoIcon,
   TimerIcon,
   UpdateIcon,
@@ -93,7 +94,7 @@ export default function MuseumCards({ museum, children }: MuseumCardsProps) {
         </div>
         <div className="museum-summary-card-icon">
           <div className="summary-card-icon">
-            <EnterIcon className="icon" />
+            <PaperPlaneIcon className="icon" />
           </div>
         </div>
       </div>
