@@ -243,6 +243,7 @@ body {
   border: none;
   color: var(--color-white);
   transform: scale(1.02);
+  cursor: pointer;
 }
 .search-bar-button:hover {
   transform: scale(1.04);
@@ -602,6 +603,7 @@ footer {
   color: var(--color-darkgray);
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .thin-icon:hover {
