@@ -1,5 +1,6 @@
 // src/components/ContactPage.tsx
-import Footer from "./Footer";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 export default function ContactPage() {
   return (
@@ -7,7 +8,8 @@ export default function ContactPage() {
       <header>
         <h1>Contacto</h1>
         <nav>
-          <a href="/">Inicio</a> | <a href="/app">Ir a la App</a>
+          <Link to="/">Inicio</Link> |<Link to="/app">App</Link> |
+          <Link to="/release">Release</Link>
         </nav>
       </header>
       <main>

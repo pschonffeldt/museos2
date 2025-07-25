@@ -1,6 +1,6 @@
 // src/components/HomePage.tsx
-import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
@@ -8,9 +8,8 @@ export default function HomePage() {
       <header>
         <h1>Museos Santiago</h1>
         <nav>
-          {/* <a href="/contact">Contacto</a> | <a href="/app">Ir a la App</a> */}
-          <Link to="/contact">Contacto</Link> |{" "}
-          <Link to="/app">Ir a la App</Link>
+          <Link to="/app">App</Link> |<Link to="/contact">Contacto</Link> |
+          <Link to="/release">Release</Link>
         </nav>
       </header>
       <main>
