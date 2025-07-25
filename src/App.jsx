@@ -1,16 +1,17 @@
 // src/App.tsx
-import Layout from "./components/Layout";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import ContactPage from "./components/ContactPage";
+import Layout from "./components/Layout"; // your museum app lives here
 
-/**
- * Root component.
- * Keep this file tiny—use it to mount global providers (router, theme, etc.)
- * and render your main Layout.
- */
 export default function App() {
   return (
-    <>
-      {/* Layout contains the entire UI (sidebar, main, notifications, etc.) */}
-      <Layout />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/app" element={<Layout />} />
+      </Routes>
+    </Router>
   );
 }
