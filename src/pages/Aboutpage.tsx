@@ -79,6 +79,53 @@ export default function About() {
             por la experiencia cultural.
           </p>
         </section>
+
+        {/* Donations Section */}
+        <section className="section section--donate">
+          <h2>Apoya el crecimiento cultural</h2>
+          <p>
+            <strong>Museos</strong> es un proyecto independiente y
+            autofinanciado, nacido con el propósito de impulsar la difusión y el
+            aprecio por la cultura. Tu apoyo nos permite seguir investigando,
+            recopilando información y mejorando esta plataforma para que cada
+            vez más personas puedan descubrir el valor de los museos.
+          </p>
+          <p>
+            Si compartes nuestra visión y deseas contribuir, te invitamos a
+            realizar una donación a través de nuestro formulario.
+          </p>
+          <div className="donate-form-link">
+            <Link to="/contact" className="button button--donate">
+              Donar ahora
+            </Link>
+          </div>
+        </section>
+
+        {/* Sponsorship Section */}
+        <section className="section section--sponsors">
+          <h2>¿Quieres ser parte de nuestro ecosistema?</h2>
+          <p>
+            En <strong>Museos</strong>, creemos en las alianzas que impulsan la
+            cultura. Si representas una marca, institución o proyecto que valora
+            el acceso a la cultura y la visibilidad en espacios digitales
+            significativos, te invitamos a explorar nuestras oportunidades de
+            patrocinio.
+          </p>
+          <p>
+            Ofrecemos espacios publicitarios dentro de nuestra plataforma,
+            newsletter y futuras integraciones móviles, pensados para llegar a
+            una audiencia curiosa, activa y culturalmente comprometida.
+          </p>
+          <p>
+            Si te interesa colaborar con nosotros y ser parte activa de esta red
+            cultural, contáctanos directamente.
+          </p>
+          <div className="sponsor-contact-link">
+            <Link to="/contact" className="button button--sponsor">
+              Explorar oportunidades
+            </Link>
+          </div>
+        </section>
       </main>
       <WebsiteFooter />
     </>

@@ -1146,3 +1146,85 @@ footer {
   color: var(--color-lightblue);
   text-decoration: underline;
 }
+
+/* Website about page */
+
+.section--donate {
+  background-color: #f3f3f3;
+  padding: 4rem 1rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.section--donate h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-darkblue);
+}
+
+.section--donate p {
+  max-width: 700px;
+  margin: 0 auto 1rem auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.donate-form-link {
+  margin-top: 2rem;
+}
+
+.button--donate {
+  display: inline-block;
+  background-color: var(--color-darkblue);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button--donate:hover {
+  background-color: var(--color-blue);
+}
+
+/* DOnaciones */
+
+.section--sponsors {
+  background-color: #eaf3ff;
+  padding: 4rem 1rem;
+  text-align: center;
+  border-top: 1px solid #cce0f4;
+}
+
+.section--sponsors h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-darkblue);
+}
+
+.section--sponsors p {
+  max-width: 700px;
+  margin: 0 auto 1rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.sponsor-contact-link {
+  margin-top: 2rem;
+}
+
+.button--sponsor {
+  display: inline-block;
+  background-color: var(--color-lightblue);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button--sponsor:hover {
+  background-color: var(--color-blue);
+}
