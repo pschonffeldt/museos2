@@ -1,0 +1,91 @@
+// src/components/About.tsx
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import WebsiteFooter from "../components/website/WebsiteFooter";
+
+export default function About() {
+  useEffect(() => {
+    document.title = "About";
+  }, []);
+  return (
+    <>
+      <header>
+        <h1>About notes</h1>
+        <nav>
+          <Link to="/">Inicio</Link> |<Link to="/app">App</Link> |
+          <Link to="/contact">Contacto</Link> |
+        </nav>
+      </header>
+      <main>
+        {/* Page Header */}
+        <header className="section section--hero">
+          <h1>Sobre Museos</h1>
+          <p className="tagline">
+            Creemos que la cultura debe estar al alcance de todos, desde
+            cualquier parte del mundo.
+          </p>
+        </header>
+
+        {/* Our Story */}
+        <section className="section section--story">
+          <h2>Nuestra historia</h2>
+          <p>
+            Museos nació como una herramienta sencilla para resolver un problema
+            real: encontrar información clara y confiable sobre los museos de
+            una ciudad antes de visitarlos. Después de viajar, descubrir
+            rincones culturales por accidente, y frustrarse con la falta de
+            detalles en línea, decidimos construir una solución práctica,
+            directa y pensada para exploradores culturales.
+          </p>
+        </section>
+
+        {/* Our Mission */}
+        <section className="section section--mission">
+          <h2>Nuestra misión</h2>
+          <p>
+            Hacer que cada persona, sin importar de dónde venga, pueda
+            descubrir, conocer y disfrutar de los museos y espacios culturales
+            de una ciudad con información útil, clara y accesible desde el
+            primer momento.
+          </p>
+        </section>
+
+        {/* Our Vision */}
+        <section className="section section--vision">
+          <h2>Nuestra visión</h2>
+          <p>
+            Queremos convertirnos en el punto de partida digital para cualquier
+            amante de la cultura. Desde Santiago hasta las capitales del mundo,
+            Museos busca conectar a las personas con los espacios que resguardan
+            el arte, la historia y la identidad de cada lugar.
+          </p>
+        </section>
+
+        {/* Looking Ahead */}
+        <section className="section section--future">
+          <h2>Lo que viene</h2>
+          <p>
+            Empezamos en Santiago de Chile, pero ya estamos preparando el camino
+            para expandirnos a todo el país y, pronto, al resto de América. Cada
+            nueva ciudad que sumamos es una oportunidad para mostrar su riqueza
+            cultural y facilitarle la vida a los viajeros y curiosos que la
+            visitan.
+          </p>
+        </section>
+
+        {/* Who We Are */}
+        <section className="section section--team">
+          <h2>¿Quiénes somos?</h2>
+          <p>
+            Museos es un proyecto independiente desarrollado por{" "}
+            <strong>Pablo</strong>, un apasionado de la cultura, el desarrollo
+            web y la exploración urbana. Todo el contenido, el código y la
+            visión detrás de esta plataforma están hechos con dedicación y amor
+            por la experiencia cultural.
+          </p>
+        </section>
+      </main>
+      <WebsiteFooter />
+    </>
+  );
+}

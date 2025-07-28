@@ -1,7 +1,7 @@
 // src/components/Footer.tsx
 
 /**
- * App footer.
+ * Website footer.
  * - Shows build/version info and author credit.
  * - Keep classNames as-is so existing CSS keeps working.
  * - Added rel="noreferrer noopener" for security when using target="_blank".
@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="footer-container">
       {/* Static version string */}
-      <p className="footer-text">Versión 1.1.4 - 24 Jul 2025</p>
+      <p className="footer-text">Este es el website footer</p>
 
       {/* Author credit + external link */}
       <p className="footer-text">

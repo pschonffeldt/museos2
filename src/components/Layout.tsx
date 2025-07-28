@@ -1,5 +1,5 @@
 // src/components/Layout.tsx
-
+import { useEffect } from "react";
 import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Main from "./Main";
@@ -35,6 +35,11 @@ export default function Layout() {
   // Artificial delay (in ms) to keep the "Buscando..." banner visible long enough
   // so the user understands something is happening.
   const delay = 3000;
+
+  // Set document title when app loads
+  useEffect(() => {
+    document.title = "Museos – App";
+  }, []);
 
   // ---------------------- HANDLERS ----------------------
 

@@ -210,22 +210,52 @@ body {
 
 .search-bar-container {
   align-content: center;
-  width: 40%;
+  width: 50%;
   height: 65px;
 }
 
 .search-bar-form {
-  width: 700px;
+  width: 600px;
   padding-left: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
 .search-bar-form-input {
   flex: 1;
   width: 500px;
   height: 35px;
   padding-left: 5px;
+}
+
+.search-bar-input:focus {
+  flex: 1;
+  height: 35px;
+  padding-left: 5px;
+}
+
+.search-bar-button {
+  margin-left: 8px;
+  height: 35px;
+  width: 100px;
+  border-radius: var(--base-radius);
+  background-color: var(--color-lightblue);
+  border: none;
+  color: var(--color-white);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.search-bar-button:hover {
+  transform: scale(1.04);
+}
+
+/* Top bar button area */
+
+.search-bar-buttons {
+  align-content: center;
+  width: 50%;
+  height: 65px;
 }
 
 .search-bar-input:focus {
@@ -266,7 +296,7 @@ body {
 }
 
 /* ---- Top nav bar right-side buttons ---- */
-.nav-top-buttons {
+.nav-bar-buttons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -274,17 +304,32 @@ body {
   height: 65px;
   padding-right: 50px;
 }
-.nav-top-button {
+
+.nav-bar-button {
+  display: inline-block;
   height: 35px;
-  width: 100px;
-  border-radius: var(--base-radius);
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center; /* vertical */
+  width: 200px;
   background-color: var(--color-lightblue);
-  border: none;
   color: var(--color-white);
-  transition: all 0.1s ease-in-out;
-}
-.nav-top-button:hover {
+  border: none;
+  border-radius: var(--base-radius);
+  /* font-weight: bold; */
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
   transform: scale(1.02);
+  cursor: pointer;
+}
+
+a.nav-bar-button {
+  text-decoration: none;
+}
+
+.nav-bar-button:hover {
+  transform: scale(1.04);
 }
 
 /* ====================
@@ -645,4 +690,34 @@ footer {
 
 .feature-badge-letter {
   font-size: 20px;
+}
+
+/* Release page (static) */
+
+.release-page {
+  color: var(--color-darkblue);
+}
+
+.release-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 50px;
+  width: 50%;
+  height: 100vh;
+}
+
+.release-version-title {
+}
+
+.release-version-description {
+}
+
+.release-date {
+}
+
+.release-ul {
+}
+
+.release-li {
 }

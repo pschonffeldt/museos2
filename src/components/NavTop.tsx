@@ -1,5 +1,6 @@
 // src/components/NavTop.tsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface NavTopProps {
   /**
@@ -52,6 +53,7 @@ export default function NavTop({ onSearch }: NavTopProps) {
 
   return (
     <nav className="nav-top">
+      {/* Nav bar search input and buttons */}
       <div className="search-bar-container">
         {/* onSubmit keeps keyboard submit working */}
         <form className="search-bar-form" onSubmit={handleSubmit}>
@@ -76,6 +78,15 @@ export default function NavTop({ onSearch }: NavTopProps) {
             Ver todos
           </button>
         </form>
+      </div>
+      {/* Top bar navigation buttons */}
+      <div className="nav-bar-buttons">
+        {/* Navigation button */}
+        <button className="nav-bar-button">
+          <Link to="/" className="nav-bar-button">
+            Detalles del proyecto
+          </Link>
+        </button>
       </div>
     </nav>
   );
