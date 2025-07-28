@@ -696,6 +696,7 @@ footer {
 
 .release-page {
   color: var(--color-darkblue);
+  height: 100vh;
 }
 
 .release-container {
@@ -720,4 +721,428 @@ footer {
 }
 
 .release-li {
+}
+
+/* ============================
+   Museos Homepage Styling
+   ============================ */
+
+/* === Shared Section Wrapper === */
+.section {
+  padding: 80px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* === Hero Section === */
+.section--hero {
+  width: 100%;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #3353a3, #3c7eea);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.section--hero .hero-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section--hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--color-white);
+}
+
+.section--hero .tagline {
+  font-size: 1.25rem;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  color: var(--color-lightgray);
+}
+
+.section--hero .button {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  background-color: var(--color-white);
+  color: var(--color-lightblue);
+  border: none;
+  border-radius: var(--base-radius);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.section--hero .button:hover {
+  background-color: var(--color-ultralightblue);
+  transform: scale(1.05);
+}
+
+/* === Light Background Section === */
+.section--light {
+  background-color: var(--color-lightgray);
+}
+
+/* === Headings & Paragraphs === */
+.section h2 {
+  font-size: 2rem;
+  color: var(--color-darkblue);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section p {
+  font-size: 1rem;
+  color: var(--color-darkestgray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* === Feature List / Benefits === */
+.section ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 40px 0;
+}
+
+.section ul li {
+  background: var(--color-white);
+  padding: 20px;
+  border-radius: var(--base-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.section ul li::before {
+  content: "✔";
+  color: var(--color-lightblue);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* === Final CTA Section === */
+.section--cta {
+  background: linear-gradient(135deg, #3353a3, #3c7eea);
+  text-align: center;
+  color: var(--color-white);
+  padding: 100px 20px;
+}
+
+.section--cta h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--color-white);
+}
+
+.section--cta .button--primary {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  background-color: var(--color-white);
+  color: var(--color-lightblue);
+  border: none;
+  border-radius: var(--base-radius);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.section--cta .button--primary:hover {
+  background-color: var(--color-ultralightblue);
+  transform: scale(1.05);
+}
+
+/* ============================
+   Release Notes Page Styling
+   ============================ */
+
+.release-page {
+  background-color: var(--color-lightgray);
+  padding: 80px 20px;
+}
+
+.release-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.release-intro {
+  font-size: 1rem;
+  color: var(--color-darkestgray);
+  text-align: center;
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+/* === Individual Version Entry === */
+.release-entry {
+  background-color: var(--color-white);
+  padding: 30px;
+  border-radius: var(--base-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.release-date {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--color-darkgray);
+  margin-bottom: 10px;
+}
+
+.release-version-description {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-darkblue);
+  margin-bottom: 15px;
+}
+
+.release-ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.release-li {
+  font-size: 1rem;
+  color: var(--color-darkestgray);
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+.release-li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-lightblue);
+  font-size: 1.5rem;
+  line-height: 1;
+  top: 2px;
+}
+
+/* ============================
+   Contact Page Styling
+   ============================ */
+
+.contact-page {
+  background-color: var(--color-lightgray);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contact-container {
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  padding: 40px;
+  border-radius: var(--base-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-container h1 {
+  font-size: 2rem;
+  color: var(--color-darkblue);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-intro {
+  font-size: 1rem;
+  color: var(--color-darkestgray);
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* === Form === */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: var(--color-darkblue);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid var(--color-darkgray);
+  border-radius: var(--base-radius);
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  background-color: var(--color-white);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-lightblue);
+  outline: none;
+}
+
+/* === Submit Button === */
+.contact-form .button--primary {
+  align-self: flex-start;
+  background-color: var(--color-lightblue);
+  color: var(--color-white);
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--base-radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form .button--primary:hover {
+  background-color: var(--color-darkblue);
+  transform: scale(1.03);
+}
+
+/* === Fallback email line === */
+.contact-email-fallback {
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: var(--color-darkestgray);
+  text-align: center;
+}
+
+.contact-email-fallback a {
+  color: var(--color-lightblue);
+  text-decoration: underline;
+}
+
+/* Website footer */
+
+.websitefooter-container {
+  background-color: var(--color-white);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  padding: 40px 20px;
+  margin-top: 80px;
+}
+
+.websitefooter-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .websitefooter-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.websitefooter-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.websitefooter-title {
+  font-size: 1rem;
+  color: var(--color-darkblue);
+  margin-bottom: 10px;
+}
+
+.websitefooter-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.websitefooter-links li {
+  margin-bottom: 6px;
+}
+
+.websitefooter-links a {
+  color: var(--color-darkestgray);
+  text-decoration: none;
+}
+
+.websitefooter-links a:hover {
+  text-decoration: underline;
+}
+
+.websitefooter-version,
+.websitefooter-quote,
+.websitefooter-credit,
+.websitefooter-email {
+  font-size: 0.9rem;
+  color: var(--color-darkestgray);
+}
+
+.websitefooter-email a {
+  color: var(--color-lightblue);
+  text-decoration: none;
+}
+
+.websitefooter-email a:hover {
+  text-decoration: underline;
+}
+
+/* Header for website */
+
+/* ============================
+   Static Page Header & Nav
+   ============================ */
+
+.staticnav-header {
+  background-color: var(--color-white);
+  padding: 20px 20px 0 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.staticnav-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .staticnav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.staticnav-title {
+  font-size: 1.8rem;
+  color: var(--color-darkblue);
+  margin: 0;
+}
+
+.staticnav-nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.staticnav-nav a {
+  text-decoration: none;
+  color: var(--color-darkestgray);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.staticnav-nav a:hover {
+  color: var(--color-lightblue);
+  text-decoration: underline;
 }

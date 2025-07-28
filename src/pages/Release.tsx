@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import WebsiteFooter from "../components/website/WebsiteFooter";
+import WebsiteNav from "../components/website/WebsiteNav";
 
 export default function Release() {
   useEffect(() => {
@@ -9,13 +10,7 @@ export default function Release() {
   }, []);
   return (
     <>
-      <header>
-        <h1>Release notes</h1>
-        <nav>
-          <Link to="/app">App</Link> |<Link to="/contact">Contacto</Link> |
-          <Link to="/release">Release</Link> | <Link to="/about">About</Link>
-        </nav>
-      </header>
+      <WebsiteNav />
 
       <main className="release-page">
         <div className="release-container">
@@ -119,7 +114,6 @@ export default function Release() {
           </div>
         </div>
       </main>
-
       <WebsiteFooter />
     </>
   );

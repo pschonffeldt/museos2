@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import WebsiteFooter from "../components/website/WebsiteFooter";
+import WebsiteNav from "../components/website/WebsiteNav";
 
 export default function About() {
   useEffect(() => {
@@ -9,16 +10,10 @@ export default function About() {
   }, []);
   return (
     <>
-      <header>
-        <h1>About notes</h1>
-        <nav>
-          <Link to="/app">App</Link> |<Link to="/contact">Contacto</Link> |
-          <Link to="/release">Release</Link> | <Link to="/about">About</Link>
-        </nav>
-      </header>
+      <WebsiteNav />
       <main>
         {/* Page Header */}
-        <header className="section section--hero">
+        <header className="section--hero">
           <h1>Sobre Museos</h1>
           <p className="tagline">
             Creemos que la cultura debe estar al alcance de todos, desde

@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import WebsiteFooter from "../components/website/WebsiteFooter";
 import { useEffect } from "react";
+import WebsiteNav from "../components/website/WebsiteNav";
 
 export default function HomePage() {
   useEffect(() => {
@@ -10,13 +11,9 @@ export default function HomePage() {
   return (
     <>
       {/* Website navigation */}
-      <header>
-        <h1>Museos Santiago</h1>
-        <nav>
-          <Link to="/app">App</Link> |<Link to="/contact">Contacto</Link> |
-          <Link to="/release">Release</Link> | <Link to="/about">About</Link>
-        </nav>
-      </header>
+
+      <WebsiteNav />
+
       {/* Page content */}
       <main>
         {/* Hero Section */}
