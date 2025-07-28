@@ -12,8 +12,8 @@ export default function Release() {
       <header>
         <h1>Release notes</h1>
         <nav>
-          <Link to="/">Inicio</Link> | <Link to="/app">App</Link> |{" "}
-          <Link to="/contact">Contacto</Link>
+          <Link to="/app">App</Link> |<Link to="/contact">Contacto</Link> |
+          <Link to="/release">Release</Link> | <Link to="/about">About</Link>
         </nav>
       </header>
 

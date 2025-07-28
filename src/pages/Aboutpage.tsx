@@ -12,8 +12,8 @@ export default function About() {
       <header>
         <h1>About notes</h1>
         <nav>
-          <Link to="/">Inicio</Link> |<Link to="/app">App</Link> |
-          <Link to="/contact">Contacto</Link> |
+          <Link to="/app">App</Link> |<Link to="/contact">Contacto</Link> |
+          <Link to="/release">Release</Link> | <Link to="/about">About</Link>
         </nav>
       </header>
       <main>
