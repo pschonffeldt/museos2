@@ -3,50 +3,59 @@
 import { Link } from "react-router-dom";
 
 export default function WebsiteFooter() {
+  const navLinks = [
+    { to: "/", label: "Inicio" },
+    { to: "/about", label: "Proyecto" },
+    { to: "/contact", label: "Contacto" },
+    { to: "/release", label: "Versiones" },
+    { to: "/app", label: "App" },
+  ];
+
   return (
     <footer className="websitefooter-container">
+      {/* Footer first row of 3 columns */}
       <div className="websitefooter-content">
         {/* Left: Navigation Links */}
         <div className="websitefooter-column">
           <h4 className="websitefooter-title">Museos</h4>
           <ul className="websitefooter-links">
+            {navLinks.map(({ to, label }) => (
+              <li key={to}>
+                <Link to={to}>{label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {/* Center: Contact information */}
+        <div className="websitefooter-column">
+          <h4 className="websitefooter-title">Nosotros</h4>
+          <ul className="websitefooter-links">
             <li>
-              <Link to="/contact">Contacto</Link>
-            </li>
-            <li>
-              <Link to="/about">Sobre nosotros</Link>
-            </li>
-            <li>
-              <Link to="/release">Notas de versión</Link>
+              Museos centraliza toda la información relevante sobre los museos
+              de Santiago en un solo lugar. Consulta horarios, ubicaciones y
+              descripciones para planear tu visita con anticipación.
             </li>
           </ul>
         </div>
-
-        {/* Center: Version + phrase */}
+        {/* Right: About */}
         <div className="websitefooter-column">
-          <p className="websitefooter-version">Versión 1.1.4 – Julio 2025</p>
-          <p className="websitefooter-quote">
-            Hecho con cariño para quienes disfrutan de la cultura.
-          </p>
-        </div>
-
-        {/* Right: Author credit */}
-        <div className="websitefooter-column">
-          <p className="websitefooter-credit">
-            Desarrollado por{" "}
-            <a
-              href="https://pschonffeldt.dev/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              pschonffeldt
-            </a>
-          </p>
-          <p className="websitefooter-email">
-            <a href="mailto:contacto@museosantiago.cl">
-              contacto@museosantiago.cl
-            </a>
-          </p>
+          <h4 className="websitefooter-title">Contacto</h4>
+          <ul className="websitefooter-links">
+            <li>
+              <p className="websitefooter-email">
+                Puedes escribirnos directamente a{" "}
+                <a href="mailto:contacto@museosantiago.cl">info@mitkof.cl</a>
+              </p>
+            </li>
+          </ul>
+          <ul className="websitefooter-links">
+            <li>
+              <p className="websitefooter-email">
+                También puedes rellenar el{" "}
+                <Link to="/contact">formulario de contacto</Link>
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
