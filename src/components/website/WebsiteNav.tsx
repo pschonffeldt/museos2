@@ -7,46 +7,41 @@ export default function WebsiteNav({ title = "Museos" }: { title?: string }) {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="staticnav-header">
-      <div className="staticnav-content">
-        <nav className="staticnav-nav">
-          <Link to="/" className={isActive("/") ? "active" : ""}>
-            {title}
+    <nav className="static-nav">
+      {/* Nav bar pages navigation */}
+      <div className="static-nav-menu-container">
+        <h2 className="static-nav-menu-title">Museos</h2>
+        {/* Add all links here */}
+        <a>
+          <Link to="/" className="static-nav-link">
+            Inicio
           </Link>
-          <Link
-            to="/contact"
-            className={`staticnav-nav-link ${
-              isActive("/contact") ? "active" : ""
-            }`}
-          >
+        </a>
+        <a>
+          <Link to="/about" className="static-nav-link">
+            Sobre el proyecto
+          </Link>
+        </a>
+        <a>
+          <Link to="/contact" className="static-nav-link">
             Contacto
           </Link>
-          <Link
-            to="/release"
-            className={`staticnav-nav-link ${
-              isActive("/release") ? "active" : ""
-            }`}
-          >
-            Release
+        </a>
+        <a>
+          <Link to="/release" className="static-nav-link">
+            Versiones
           </Link>
-          <Link
-            to="/about"
-            className={`staticnav-nav-link ${
-              isActive("/about") ? "active" : ""
-            }`}
-          >
-            About
-          </Link>
-          <Link
-            to="/app"
-            className={`staticnav-nav-link ${
-              isActive("/about") ? "active" : ""
-            }`}
-          >
-            Ir a la Aplicación
-          </Link>
-        </nav>
+        </a>
       </div>
-    </header>
+      {/* Nav bar to app navigation */}
+      <div className="static-nav-buttons">
+        {/* to app button */}
+        <button className="static-nav-button">
+          <Link to="/app" className="static-nav-button">
+            Ir a la aplicación
+          </Link>
+        </button>
+      </div>
+    </nav>
   );
 }

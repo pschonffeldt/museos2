@@ -1021,6 +1021,212 @@ footer {
   text-decoration: underline;
 }
 
+/* ================== WEBSITE ==================  */
+/* ================== WEBSITE ==================  */
+/* ================== WEBSITE ==================  */
+/* ================== WEBSITE ==================  */
+/* ================== WEBSITE ==================  */
+/* ================== WEBSITE ==================  */
+/* ================== WEBSITE ==================  */
+/* ================== WEBSITE ==================  */
+/* ================== WEBSITE ==================  */
+/* ================== WEBSITE ==================  */
+/* ================== WEBSITE ==================  */
+
+/* Website nav */
+
+.static-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  background-color: var(--color-lightgray);
+  z-index: 1;
+}
+
+.static-nav-menu-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  gap: 20px;
+  padding-left: 300px;
+}
+
+.static-nav-menu-title {
+  font-size: 24px;
+  color: var(--color-darkblue);
+  padding-right: 10px;
+}
+
+.static-nav-link {
+  align-items: center;
+  border: none;
+  border-radius: var(--base-radius);
+  color: var(--color-darkblue);
+  cursor: pointer;
+  height: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  transform: scale(1.02);
+  text-decoration: none;
+}
+
+.static-nav-link:hover {
+  text-decoration: underline;
+}
+
+.static-nav-buttons {
+  padding-right: 50px;
+}
+
+.static-nav-button {
+  display: inline-block;
+  height: 35px;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center; /* vertical */
+  width: 200px;
+  background-color: var(--color-lightblue);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--base-radius);
+  /* font-weight: bold; */
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+a.static-nav-button {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.static-nav-button:hover {
+  transform: scale(1.04);
+}
+
+button.static-nav-button:hover {
+  transform: scale(1.04);
+}
+
+/* Top bar button area */
+
+.search-bar-buttons {
+  align-content: center;
+  width: 50%;
+  height: 65px;
+}
+
+.search-bar-input:focus {
+  flex: 1;
+  height: 35px;
+  padding-left: 5px;
+}
+
+.search-bar-button {
+  margin-left: 8px;
+  height: 35px;
+  width: 100px;
+  border-radius: var(--base-radius);
+  background-color: var(--color-lightblue);
+  border: none;
+  color: var(--color-white);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.search-bar-button:hover {
+  transform: scale(1.04);
+}
+
+/* Unused? (duplicate width) */
+.search-bar {
+  display: flex;
+  height: 65px;
+  width: 100%;
+  align-items: center;
+  background-color: var(--color-white);
+  gap: 20px;
+  width: 80vw;
+  background-color: var(--color-lightblue);
+}
+
+.nav-top-hint {
+  font-size: 16px;
+}
+
+/* ---- Top nav bar right-side buttons ---- */
+.nav-bar-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  padding-right: 50px;
+}
+
+.nav-bar-button {
+  display: inline-block;
+  height: 35px;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center; /* vertical */
+  width: 200px;
+  background-color: var(--color-lightblue);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--base-radius);
+  /* font-weight: bold; */
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+a.nav-bar-button {
+  text-decoration: none;
+}
+
+.nav-bar-button:hover {
+  transform: scale(1.04);
+}
+
+/* ============================
+   Static Page Header & Nav
+   ============================ */
+
+.staticnav-header {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-darkgray);
+}
+
+.staticnav-content {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.staticnav-nav {
+  display: flex;
+  gap: 50px;
+  width: 60vw;
+  margin: 0 auto;
+  height: 75px;
+}
+
 /* Website footer */
 
 .websitefooter-container {
@@ -1092,37 +1298,6 @@ footer {
 
 .websitefooter-email a:hover {
   text-decoration: underline;
-}
-
-/* Header for website */
-
-/* ============================
-   Static Page Header & Nav
-   ============================ */
-
-.staticnav-header {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-darkgray);
-}
-
-.staticnav-content {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  width: 60vw;
-  margin: 0 auto;
-}
-
-.staticnav-nav {
-  display: flex;
-  gap: 50px;
-  width: 60vw;
-  margin: 0 auto;
-  height: 75px;
 }
 
 /* Website about page */
