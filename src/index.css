@@ -1246,6 +1246,12 @@ a.nav-bar-button {
   padding: 0 100px;
 }
 
+.websitefooter-copy {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
 .websitefooter-column {
   display: flex;
   flex-direction: column;

@@ -58,6 +58,15 @@ export default function WebsiteFooter() {
           </ul>
         </div>
       </div>
+      <div className="websitefooter-copy">
+        <p className="websitefooter-links">
+          {" "}
+          <a href="https://pschonffeldt.dev/">
+            {" "}
+            Desarrollado en 🇨🇱 por pschonffeldt
+          </a>
+        </p>
+      </div>
     </footer>
   );
 }
