@@ -17,7 +17,7 @@ export default function HomePage() {
       {/* Page content */}
       <main>
         {/* Hero Section */}
-        <header className="section section--hero">
+        <header className="section--hero">
           <h1>Descubre los museos antes de visitarlos</h1>
           <p className="tagline">
             Explora, compara y prepárate para tu próxima visita cultural con
@@ -31,13 +31,23 @@ export default function HomePage() {
 
         {/* What is Museos */}
         <section className="section section--what">
-          <h2>¿Qué es Museos?</h2>
-          <p>
-            Museos es una aplicación web que te ayuda a encontrar y conocer
-            museos en una ciudad antes de visitarlos. En vez de buscar en
-            múltiples páginas, Museos te muestra toda la información en un solo
-            lugar: ubicación, descripción, colecciones destacadas y más.
-          </p>
+          <div className="section--what--content">
+            <h2>¿Qué es Museos?</h2>
+            <p className="section--what--p">
+              Museos es una aplicación web que te ayuda a encontrar y conocer
+              centros culturales antes de visitarlos. En vez de buscar en
+              múltiples páginas, Museos te muestra toda la información en un
+              solo lugar: ubicación, descripción, colecciones destacadas y más.
+              De esta manera ahorras tiempo y esfuerzo.
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1621886292650-520f76c747d6?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Descriptive alt text"
+              className="section--what--image"
+            ></img>
+          </div>
         </section>
 
         {/* How it Works */}
@@ -55,32 +65,48 @@ export default function HomePage() {
         {/* Who is it for */}
         <section className="section section--who">
           <h2>¿Para quién es?</h2>
-          <ul>
-            <li>Viajeros que planean sus recorridos culturales</li>
-            <li>Amantes de los museos y la historia</li>
-            <li>Curiosos locales que quieren descubrir nuevos espacios</li>
-            <li>Familias que buscan actividades educativas</li>
-          </ul>
+          <div className="section--who--grid">
+            <div className="section--who--gridbox">
+              <p>Viajeros que planean sus recorridos culturales</p>
+            </div>
+            <div className="section--who--gridbox">
+              <p>Amantes de los museos y la historia</p>
+            </div>
+            <div className="section--who--gridbox">
+              <p>Curiosos locales que quieren descubrir nuevos espacios</p>
+            </div>
+            <div className="section--who--gridbox">
+              <p>Familias que buscan actividades educativas</p>
+            </div>
+          </div>
         </section>
 
         {/* Availability */}
-        <section className="section section--availability">
-          <h2>¿Dónde funciona?</h2>
-          <p>
-            Actualmente tenemos información de todos los museos de{" "}
-            <strong>Santiago de Chile</strong>. Pero este es solo el comienzo.
-            Próximamente expandiremos a:
-          </p>
-          <p>
-            <strong>
-              Chile → Sudamérica → Centroamérica y el Caribe → Norteamérica
-            </strong>
-          </p>
+        <section className="section section--what">
+          <div className="section--what--content">
+            <h2>¿Dónde funciona?</h2>
+            <p>
+              Actualmente tenemos información de gran parte de los museos de{" "}
+              <strong>Santiago de Chile</strong>. Pero este es solo el comienzo.
+              Próximamente expandiremos a:
+            </p>
+            <p>
+              <strong>Chile → Sudamérica → Norteamérica → 🌎</strong>
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1621886292650-520f76c747d6?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Descriptive alt text"
+              className="section--what--image"
+            ></img>
+          </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="section section--cta">
+        {/* CTA */}
+        <section className="section--cta">
           <h2>¿Listo para tu próxima aventura cultural?</h2>
+
           <a href="/app" className="button button--primary">
             Ir a la app
           </a>

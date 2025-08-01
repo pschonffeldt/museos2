@@ -728,7 +728,7 @@ footer {
 
 /* === Shared Section Wrapper === */
 .section {
-  padding: 80px 20px;
+  padding: 120px 20px;
   max-width: 960px;
   margin: 0 auto;
 }
@@ -740,6 +740,7 @@ footer {
   background: linear-gradient(135deg, #3353a3, #3c7eea);
   color: var(--color-white);
   text-align: center;
+  min-height: 400px;
 }
 
 .section--hero .hero-content {
@@ -780,6 +781,29 @@ footer {
   transform: scale(1.05);
 }
 
+/* === Double column Section === */
+
+.section--what {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.section--what--content {
+  flex: 1;
+}
+
+.section--what--p {
+  text-align: left !important;
+}
+
+.section--what--image {
+  width: 400px; /* or a fixed value like 300px */
+  height: auto;
+  border-radius: var(--base-radius);
+}
+
 /* === Light Background Section === */
 .section--light {
   background-color: var(--color-lightgray);
@@ -801,30 +825,37 @@ footer {
   text-align: center;
 }
 
-/* === Feature List / Benefits === */
-.section ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 40px 0;
+/* === Who is this for Section === */
+
+.section--who {
 }
 
-.section ul li {
-  background: var(--color-white);
-  padding: 20px;
+.section--who--grid {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.section--who--gridbox {
+  display: flex;
+  align-items: center; /* vertical */
+  justify-content: center; /* horizontal */
+  background-color: var(--color-lightblue);
   border-radius: var(--base-radius);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 25%;
+  height: 80px;
   text-align: center;
 }
 
-.section ul li::before {
-  content: "✔";
-  color: var(--color-lightblue);
-  font-weight: bold;
-  margin-right: 8px;
+.section--who--gridbox p {
+  color: var(--color-white);
+  text-align: center;
+  margin: 0;
+  padding: 0 10px; /* optional: some horizontal breathing room */
+  line-height: 1.4;
 }
+
+/* === Final CTA Section === */
 
 /* === Final CTA Section === */
 .section--cta {
