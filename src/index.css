@@ -691,37 +691,6 @@ footer {
   font-size: 20px;
 }
 
-/* Release page (static) */
-
-.release-page {
-  color: var(--color-darkblue);
-  height: 100vh;
-}
-
-.release-container {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  padding-top: 50px;
-  width: 50%;
-  height: 100vh;
-}
-
-.release-version-title {
-}
-
-.release-version-description {
-}
-
-.release-date {
-}
-
-.release-ul {
-}
-
-.release-li {
-}
-
 /* ============================
    Museos Homepage Styling
    ============================ */
@@ -890,12 +859,11 @@ footer {
 }
 
 /* ============================
-   Release Notes Page Styling
+   Release Page Styling
    ============================ */
 
 .release-page {
-  background-color: var(--color-lightgray);
-  padding: 80px 20px;
+  background-color: var(--color-white);
 }
 
 .release-container {

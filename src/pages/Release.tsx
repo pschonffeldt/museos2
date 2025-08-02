@@ -13,7 +13,8 @@ export default function Release() {
       <WebsiteNav />
 
       <main className="release-page">
-        <div className="release-container">
+        <div className="section release-container">
+          <h1>Historial de actualizaciones</h1>
           <p className="release-intro">
             Esta página documenta todos los cambios y mejoras realizadas en la
             aplicación <strong>Museos</strong>, desde su lanzamiento inicial.
@@ -29,18 +30,13 @@ export default function Release() {
             </h3>
             <ul className="release-ul">
               <li className="release-li">
-                Hoy se publica oficialmente la primera versión estable de
-                Museos, una aplicación web diseñada para buscar museos en
-                Santiago de Chile y explorar sus detalles antes de visitarlos.
-                Esta versión inicial incluye una función de búsqueda por nombre
-                o palabra clave, junto con una interfaz fluida que permite
-                visualizar tanto la descripción general como la colección de
-                cada museo. La navegación ha sido optimizada para adaptarse a
-                distintos dispositivos, y el diseño prioriza la claridad y la
-                experiencia del usuario desde el primer momento. Con este
-                lanzamiento damos el primer paso hacia una herramienta
-                accesible, útil y culturalmente enriquecedora. ¡Gracias por ser
-                parte de este inicio!
+                Esta versión ofrece búsqueda de museos por nombre, visualización
+                instantánea de la descripción general y de la colección de cada
+                museo, todo a través de una interfaz optimizada para escritorio.
+                La navegación, diseñada para ser clara e intuitiva. Con este
+                primer lanzamiento, Museos pone a tu disposición una herramienta
+                accesible y práctica para planificar tus visitas culturales en
+                Santiago de Chile.
               </li>
             </ul>
           </div>
@@ -49,18 +45,19 @@ export default function Release() {
           <div className="release-entry">
             <h4 className="release-date">Miércoles 23 de julio de 2025</h4>
             <h3 className="release-version-description">
-              Versión 1.1.0 – Mejora de accesibilidad en el formulario
+              Versión 1.1.0 – Mejora de accesibilidad en el buscador
             </h3>
             <ul className="release-ul">
               <li className="release-li">
-                Después de compartir la app con algunos amigos, noté que sin
-                contexto les resultaba difícil entender cómo utilizarla. Para
-                mejorar esto, añadí una mejor descripción en el formulario de
-                búsqueda, clarificando su propósito desde el primer vistazo.
-                Además, incorporé un nuevo botón “Ver todos los museos” junto al
-                de “Buscar”. Esta funcionalidad nació a partir de un
-                comportamiento accidental (mostrar todos los museos cuando el
-                campo estaba vacío), que decidí mantener como feature oficial.
+                En esta versión refinamos el buscador tras compartir la app con
+                algunos amigos y descubrir que, sin contexto, les costaba
+                entender su propósito. Ahora el campo muestra una descripción
+                clara desde el primer vistazo y, junto al botón de “Buscar”,
+                incorpora la opción “Ver todos los museos”. Esta función surge
+                de un comportamiento accidental que mostraba todos los
+                resultados al dejar el campo vacío y se consolida como una
+                característica oficial para facilitar la exploración completa de
+                la colección.
               </li>
             </ul>
           </div>
@@ -72,10 +69,9 @@ export default function Release() {
             </h3>
             <ul className="release-ul">
               <li className="release-li">
-                Detecté un parpadeo molesto en la sección de resultados al
-                renderizar los componentes. El problema estaba en la
-                configuración del scroll, así que ajusté el CSS para eliminar
-                ese flash visual al cargar los datos.
+                Se corrigió un parpadeo en la sección de resultados durante la
+                renderización de componentes. Se optimizó la configuración del
+                scroll para eliminar el flash visual al cargar los datos.
               </li>
             </ul>
           </div>
@@ -87,10 +83,11 @@ export default function Release() {
             </h3>
             <ul className="release-ul">
               <li className="release-li">
-                Añadí un menú de navegación lateral fijo. Actualmente es solo
-                decorativo, pero ya está integrado en la UI y preparado para
-                futuras funciones como navegación entre secciones y ajustes de
-                usuario.
+                Se añadió un menú de navegación lateral fijo que, aunque por
+                ahora cumple una función decorativa, ya está completamente
+                integrado en la interfaz y preparado para futuras
+                funcionalidades como la navegación entre secciones y los ajustes
+                de usuario.
               </li>
             </ul>
           </div>
@@ -103,18 +100,40 @@ export default function Release() {
             </h3>
             <ul className="release-ul">
               <li className="release-li">
-                Hoy mejoré detalles finos en la barra de navegación lateral.
-                Noté que el cursor no cambiaba al pasar por los íconos, así que
-                actualicé el CSS para que muestre el puntero (pointer) al hacer
-                hover, reforzando la percepción de interactividad. También
-                reemplacé los íconos genéricos por versiones personalizadas:
-                cajas con letras grandes, más alineadas con el diseño de la app.
+                Se mejoraron detalles finos en la barra de navegación lateral.
+                El cursor ahora cambia a puntero al pasar sobre los íconos,
+                reforzando la percepción de interactividad. Además, los íconos
+                genéricos fueron reemplazados por versiones personalizadas,
+                consistentes en cajas con letras grandes alineadas al diseño de
+                la aplicación.
+              </li>
+            </ul>
+          </div>
+          {/* Entry: Versión 1.2.0 */}
+          <div className="release-entry">
+            <h4 className="release-date">Viernes 1 de agosto de 2025</h4>
+            <h3 className="release-version-description">
+              Versión 1.2.0 – Lanzamiento del sitio estático
+            </h3>
+            <ul className="release-ul">
+              <li className="release-li">
+                Lanzamiento de la primera versión del sitio estático de Museos
+                para que usuarios e interesados puedan explorar sus
+                características y entender de qué se trata sin necesidad de
+                conexión a la base de datos. Para ello se incorporó enrutamiento
+                en el código, definiendo rutas para las páginas de inicio,
+                contacto, “Acerca de” y notas de versión, y adaptando los
+                componentes de navegación para que funcionen correctamente en un
+                entorno web estático. Gracias a esta actualización, el sitio
+                presenta de forma clara la propuesta de valor de la app y está
+                listo para incorporar nuevas secciones informativas en el
+                futuro.
               </li>
             </ul>
           </div>
         </div>
+        <WebsiteFooter />
       </main>
-      <WebsiteFooter />
     </>
   );
 }
