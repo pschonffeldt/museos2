@@ -149,6 +149,21 @@ export default function Release() {
               </li>
             </ul>
           </div>
+          {/* Entry: Versión 1.2.2 */}
+          <div className="release-entry">
+            <h4 className="release-date">Lunes 4 de agosto de 2025</h4>
+            <h3 className="release-version-description">
+              Versión 1.2.2 – Rediseño de notificaciones para mayor claridad
+            </h3>
+            <ul className="release-ul">
+              <li className="release-li">
+                Hemos ajustado las notificaciones para que sean más fáciles de
+                leer. Cambiamos su posición y añadimos una nueva animación,
+                haciendo que se integren mejor con la interfaz sin pasar
+                desapercibidas.
+              </li>
+            </ul>
+          </div>
         </div>
         <WebsiteFooter />
       </main>

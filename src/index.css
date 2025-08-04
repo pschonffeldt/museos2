@@ -595,25 +595,27 @@ footer {
 .notification,
 .error {
   position: fixed;
-  top: 11px;
-  right: 1rem;
+  top: 80px;
+  right: 50px;
   background: var(--color-darkgreen);
   border-radius: var(--base-notification);
   padding: 0.75rem 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.094);
   opacity: 0;
   color: white;
-  transform: translateY(-20px);
+  transform: translateX(20px); /* Changed from -20px */
   transition: opacity 0.3s ease, transform 1s ease;
   z-index: 9999; /* Above everything */
 }
+
 .notification.enter {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0); /* Final position */
 }
+
 .notification.exit {
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateX(20px); /* Exit back to right */
 }
 
 /* Variant when there are no results */

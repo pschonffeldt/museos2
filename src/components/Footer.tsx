@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="footer-container">
       {/* Static version string */}
-      <p className="footer-text">Versión 1.2.1 - 4 Ago 2025</p>
+      <p className="footer-text">Versión 1.2.2 - 4 Ago 2025</p>
 
       {/* Author credit + external link */}
       <p className="footer-text">
