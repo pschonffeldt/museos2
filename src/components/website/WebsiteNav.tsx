@@ -1,6 +1,7 @@
 // src/components/WebsiteNav.tsx
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { APP_NAME } from "../../lib/constants";
 
 export default function WebsiteNav({ title = "Museos" }: { title?: string }) {
   const location = useLocation();
@@ -10,7 +11,7 @@ export default function WebsiteNav({ title = "Museos" }: { title?: string }) {
     <nav className="static-nav">
       {/* Nav bar pages navigation */}
       <div className="static-nav-menu-container">
-        <h2 className="static-nav-menu-title">Museos</h2>
+        <h2 className="static-nav-menu-title">{APP_NAME}</h2>
         {/* Add all links here */}
         <a>
           <Link to="/" className="static-nav-link">

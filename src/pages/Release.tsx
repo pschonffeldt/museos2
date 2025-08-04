@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import WebsiteFooter from "../components/website/WebsiteFooter";
 import WebsiteNav from "../components/website/WebsiteNav";
+import { APP_NAME } from "../lib/constants";
 
 export default function Release() {
   useEffect(() => {
@@ -17,9 +18,9 @@ export default function Release() {
           <h1>Historial de actualizaciones</h1>
           <p className="release-intro">
             Esta página documenta todos los cambios y mejoras realizadas en la
-            aplicación <strong>Museos</strong>, desde su lanzamiento inicial.
-            Aquí puedes seguir el desarrollo y las nuevas funcionalidades en
-            tiempo real.
+            aplicación <strong>{APP_NAME}</strong>, desde su lanzamiento
+            inicial. Aquí puedes seguir el desarrollo y las nuevas
+            funcionalidades en tiempo real.
           </p>
 
           {/* Entry: Versión 1.0.0 */}

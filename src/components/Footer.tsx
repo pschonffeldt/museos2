@@ -1,4 +1,6 @@
 // src/components/Footer.tsx
+import React from "react";
+import { APP_VERSION } from "../lib/constants";
 
 /**
  * App footer.
@@ -13,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="footer-container">
       {/* Static version string */}
-      <p className="footer-text">Versión 1.2.2 - 4 Ago 2025</p>
+      <p className="footer-text">Versión {APP_VERSION} - 4 Ago 2025</p>
 
       {/* Author credit + external link */}
       <p className="footer-text">

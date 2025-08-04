@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import WebsiteFooter from "../components/website/WebsiteFooter";
 import WebsiteNav from "../components/website/WebsiteNav";
+import { APP_NAME } from "../lib/constants";
 
 export default function About() {
   useEffect(() => {
@@ -14,7 +15,7 @@ export default function About() {
       <main>
         {/* Page Header */}
         <header className="section--hero">
-          <h1>Sobre Museos</h1>
+          <h1>Sobre {APP_NAME}</h1>
           <p className="tagline">
             Creemos que la cultura debe estar al alcance de todos, desde
             cualquier parte del mundo.
@@ -25,12 +26,12 @@ export default function About() {
         <section className="section section--story">
           <h2>Nuestra historia</h2>
           <p>
-            Museos nació como una herramienta sencilla para resolver un problema
-            real: encontrar información clara y confiable sobre los museos de
-            una ciudad antes de visitarlos. Después de viajar, descubrir
-            rincones culturales por accidente, y frustrarse con la falta de
-            detalles en línea, decidimos construir una solución práctica,
-            directa y pensada para exploradores culturales.
+            {APP_NAME} nació como una herramienta sencilla para resolver un
+            problema real: encontrar información clara y confiable sobre los{" "}
+            museos de una ciudad antes de visitarlos. Después de viajar,
+            descubrir rincones culturales por accidente, y frustrarse con la
+            falta de detalles en línea, decidimos construir una solución
+            práctica, directa y pensada para exploradores culturales.
           </p>
         </section>
 
@@ -39,9 +40,9 @@ export default function About() {
           <h2>Nuestra misión</h2>
           <p>
             Hacer que cada persona, sin importar de dónde venga, pueda
-            descubrir, conocer y disfrutar de los museos y espacios culturales
-            de una ciudad con información útil, clara y accesible desde el
-            primer momento.
+            descubrir, conocer y disfrutar de los {APP_NAME} y espacios
+            culturales de una ciudad con información útil, clara y accesible
+            desde el primer momento.
           </p>
         </section>
 
@@ -50,9 +51,9 @@ export default function About() {
           <h2>Nuestra visión</h2>
           <p>
             Queremos convertirnos en el punto de partida digital para cualquier
-            amante de la cultura. Desde Santiago hasta las capitales del mundo,
-            Museos busca conectar a las personas con los espacios que resguardan
-            el arte, la historia y la identidad de cada lugar.
+            amante de la cultura. Desde Santiago hasta las capitales del mundo,{" "}
+            {APP_NAME} busca conectar a las personas con los espacios que
+            resguardan el arte, la historia y la identidad de cada lugar.
           </p>
         </section>
 
@@ -72,7 +73,7 @@ export default function About() {
         <section className="section section--team">
           <h2>¿Quiénes somos?</h2>
           <p>
-            Museos es un proyecto independiente desarrollado por{" "}
+            {APP_NAME} es un proyecto independiente desarrollado por{" "}
             <strong>Pablo</strong>, un apasionado de la cultura, el desarrollo
             web y la exploración urbana. Todo el contenido, el código y la
             visión detrás de esta plataforma están hechos con dedicación y amor
@@ -84,11 +85,11 @@ export default function About() {
         <section className="section section--donate">
           <h2>Apoya el crecimiento cultural</h2>
           <p>
-            <strong>Museos</strong> es un proyecto independiente y
+            <strong>{APP_NAME}</strong> es un proyecto independiente y
             autofinanciado, nacido con el propósito de impulsar la difusión y el
             aprecio por la cultura. Tu apoyo nos permite seguir investigando,
             recopilando información y mejorando esta plataforma para que cada
-            vez más personas puedan descubrir el valor de los museos.
+            vez más personas puedan descubrir el valor de los {APP_NAME}.
           </p>
           <p>
             Si compartes nuestra visión y deseas contribuir, te invitamos a

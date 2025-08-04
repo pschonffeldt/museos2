@@ -1,6 +1,6 @@
 // src/components/WebsiteFooter.tsx
-
 import { Link } from "react-router-dom";
+import { APP_NAME } from "../../lib/constants";
 
 export default function WebsiteFooter() {
   const navLinks = [
@@ -17,7 +17,7 @@ export default function WebsiteFooter() {
       <div className="websitefooter-content">
         {/* Left: Navigation Links */}
         <div className="websitefooter-column">
-          <h4 className="websitefooter-title">Museos</h4>
+          <h4 className="websitefooter-title">{APP_NAME}</h4>
           <ul className="websitefooter-links">
             {navLinks.map(({ to, label }) => (
               <li key={to}>
@@ -31,9 +31,10 @@ export default function WebsiteFooter() {
           <h4 className="websitefooter-title">Nosotros</h4>
           <ul className="websitefooter-links">
             <li>
-              Museos centraliza toda la información relevante sobre los museos
-              de Santiago en un solo lugar. Consulta horarios, ubicaciones y
-              descripciones para planear tu visita con anticipación.
+              {APP_NAME} centraliza toda la información relevante sobre los
+              museos de Santiago en un solo lugar. Consulta horarios,
+              ubicaciones y descripciones para planear tu visita con
+              anticipación.
             </li>
           </ul>
         </div>

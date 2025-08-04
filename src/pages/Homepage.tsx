@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import WebsiteFooter from "../components/website/WebsiteFooter";
 import { useEffect } from "react";
 import WebsiteNav from "../components/website/WebsiteNav";
+import { APP_NAME } from "../lib/constants";
 
 export default function HomePage() {
   useEffect(() => {
@@ -20,9 +21,9 @@ export default function HomePage() {
         <header className="section--hero">
           <h1>Descubre los museos antes de visitarlos</h1>
           <p className="tagline">
-            Explora, compara y prepárate para tu próxima visita cultural con
-            Museos, la app que te muestra todo lo que necesitas saber antes de
-            ir.
+            Explora, compara y prepárate para tu próxima visita cultural con{" "}
+            {APP_NAME}, la app que te muestra todo lo que necesitas saber antes
+            de ir.
           </p>
           <a href="/app" className="button">
             Explorar museos
@@ -32,13 +33,13 @@ export default function HomePage() {
         {/* What is Museos */}
         <section className="section section--what">
           <div className="section--what--content">
-            <h2>¿Qué es Museos?</h2>
+            <h2>¿Qué es {APP_NAME}?</h2>
             <p className="section--what--p">
-              Museos es una aplicación web que te ayuda a encontrar y conocer
-              centros culturales antes de visitarlos. En vez de buscar en
-              múltiples páginas, Museos te muestra toda la información en un
-              solo lugar: ubicación, descripción, colecciones destacadas y más.
-              De esta manera ahorras tiempo y esfuerzo.
+              {APP_NAME} es una aplicación web que te ayuda a encontrar y
+              conocer centros culturales antes de visitarlos. En vez de buscar
+              en múltiples páginas, {APP_NAME} te muestra toda la información en
+              un solo lugar: ubicación, descripción, colecciones destacadas y
+              más. De esta manera ahorras tiempo y esfuerzo.
             </p>
           </div>
           <div>
@@ -108,7 +109,7 @@ export default function HomePage() {
           <h2>¿Listo para tu próxima aventura cultural?</h2>
 
           <a href="/app" className="button button--primary">
-            Ir a la app
+            Ir a {APP_NAME}
           </a>
         </section>
       </main>
