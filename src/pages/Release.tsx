@@ -180,6 +180,21 @@ export default function Release() {
               </li>
             </ul>
           </div>
+          {/* Entry: Versión 1.2.4 */}
+          <div className="release-entry">
+            <h4 className="release-date">Lunes 4 de agosto de 2025</h4>
+            <h3 className="release-version-description">
+              Versión 1.2.4 – Nuevo formulario de contacto
+            </h3>
+            <ul className="release-ul">
+              <li className="release-li">
+                En esta actualización, hemos añadido un formulario de contacto
+                completamente funcional en la página de contacto. Ahora puedes
+                enviarnos tus mensajes, dudas o sugerencias de forma directa y
+                sencilla desde la web.
+              </li>
+            </ul>
+          </div>
         </div>
         <WebsiteFooter />
       </main>
