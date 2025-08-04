@@ -13,7 +13,7 @@ export default function ContactPage() {
     <>
       <WebsiteNav />
 
-      <main className="section section--light contact-page">
+      <main className="section contact-page">
         <div className="contact-container">
           <h1>Contáctanos</h1>
           <p className="contact-intro">
@@ -48,9 +48,7 @@ export default function ContactPage() {
 
           <p className="contact-email-fallback">
             También puedes escribirnos a{" "}
-            <a href="mailto:contacto@museosantiago.cl">
-              contacto@museosantiago.cl
-            </a>
+            <a href="mailto:info@mitkof.cl">info@mitkof.cl</a>
           </p>
         </div>
       </main>
