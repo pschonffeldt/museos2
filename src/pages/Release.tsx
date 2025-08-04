@@ -131,6 +131,22 @@ export default function Release() {
               </li>
             </ul>
           </div>
+          {/* Entry: Versión 1.2.1 */}
+          <div className="release-entry">
+            <h4 className="release-date">Viernes 1 de agosto de 2025</h4>
+            <h3 className="release-version-description">
+              Versión 1.2.1 – Mejoras del sitio estático
+            </h3>
+            <ul className="release-ul">
+              <li className="release-li">
+                Hemos mejorado el diseño del sitio web estático con algunos
+                ajustes de estilo que le dan un aspecto más limpio y moderno.
+                Además, implementamos desplazamiento suave al navegar entre
+                páginas, lo que hace que la experiencia de usuario sea más
+                fluida y evita los molestos parpadeos al cambiar de sección.
+              </li>
+            </ul>
+          </div>
         </div>
         <WebsiteFooter />
       </main>

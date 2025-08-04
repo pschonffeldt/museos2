@@ -4,11 +4,13 @@ import HomePage from "./pages/Homepage";
 import ContactPage from "./pages/Contactpage";
 import Release from "./pages/Release";
 import Aboutpage from "./pages/Aboutpage";
-import Layout from "./components/Layout"; // your museum app lives here
+import Layout from "./components/Layout";
+import ScrollToTop from "./lib/ScrollToTop";
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />

@@ -1176,7 +1176,6 @@ button.static-nav-button:hover {
   color: var(--color-white);
   border: none;
   border-radius: var(--base-radius);
-  /* font-weight: bold; */
   text-decoration: none;
   text-align: center;
   cursor: pointer;
@@ -1288,10 +1287,9 @@ websitefooter-email a:hover {
 /* Website about page */
 
 .section--donate {
-  background-color: #f3f3f3;
+  background-color: var(--color-gray);
   padding: 4rem 1rem;
   text-align: center;
-  border-top: 1px solid #ddd;
 }
 
 .section--donate h2 {
@@ -1319,11 +1317,11 @@ websitefooter-email a:hover {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transform: scale(1.02);
 }
 
 .button--donate:hover {
-  background-color: var(--color-blue);
+  transform: scale(1.04);
 }
 
 /* Donaciones */
