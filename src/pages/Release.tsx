@@ -165,6 +165,21 @@ export default function Release() {
               </li>
             </ul>
           </div>
+          {/* Entry: Versión 1.2.3 */}
+          <div className="release-entry">
+            <h4 className="release-date">Lunes 4 de agosto de 2025</h4>
+            <h3 className="release-version-description">
+              Versión 1.2.3 – Información de la app siempre visible
+            </h3>
+            <ul className="release-ul">
+              <li className="release-li">
+                Incorporamos de forma dinámica el nombre de la aplicación y su
+                versión en todas las páginas y en la app. Esto permite una mejor
+                trazabilidad y facilita la identificación de la versión actual,
+                tanto para usuarios como para el equipo de soporte.
+              </li>
+            </ul>
+          </div>
         </div>
         <WebsiteFooter />
       </main>
