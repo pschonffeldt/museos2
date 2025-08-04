@@ -64,6 +64,7 @@ export default function Release() {
 
           {/* Entry: Versión 1.1.1 */}
           <div className="release-entry">
+            <h4 className="release-date">Miércoles 23 de julio de 2025</h4>
             <h3 className="release-version-description">
               Versión 1.1.1 – Corrección visual en resultados
             </h3>
@@ -133,7 +134,7 @@ export default function Release() {
           </div>
           {/* Entry: Versión 1.2.1 */}
           <div className="release-entry">
-            <h4 className="release-date">Viernes 1 de agosto de 2025</h4>
+            <h4 className="release-date">Lunes 4 de agosto de 2025</h4>
             <h3 className="release-version-description">
               Versión 1.2.1 – Mejoras del sitio estático
             </h3>
