@@ -46,7 +46,7 @@ export default function WebsiteNav({ title = APP_NAME }: { title?: string }) {
       {/* Nav bar to app navigation */}
       <div className="static-nav-buttons">
         {/* Link styled exactly like your button class */}
-        <Link to="/app" className="static-nav-button">
+        <Link to="/museos" className="static-nav-button">
           Ir a la aplicación
         </Link>
       </div>

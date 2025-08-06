@@ -41,7 +41,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <WebsiteNav />
+      {/* <WebsiteNav /> */}
 
       <main className="section contact-page">
         <div className="contact-container">
@@ -106,7 +106,7 @@ export default function ContactPage() {
         </div>
       </main>
 
-      <WebsiteFooter />
+      {/* <WebsiteFooter /> */}
     </>
   );
 }

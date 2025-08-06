@@ -11,7 +11,7 @@ export default function About() {
   }, []);
   return (
     <>
-      <WebsiteNav />
+      {/* <WebsiteNav /> */}
       <main>
         {/* Page Header */}
         <header className="section--hero">
@@ -102,7 +102,7 @@ export default function About() {
           </div>
         </section>
       </main>
-      <WebsiteFooter />
+      {/* <WebsiteFooter /> */}
     </>
   );
 }

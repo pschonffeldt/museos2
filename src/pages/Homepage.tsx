@@ -13,7 +13,7 @@ export default function HomePage() {
     <>
       {/* Website navigation */}
 
-      <WebsiteNav />
+      {/* <WebsiteNav /> */}
 
       {/* Page content */}
       <main>
@@ -114,7 +114,7 @@ export default function HomePage() {
         </section>
       </main>
 
-      <WebsiteFooter />
+      {/* <WebsiteFooter /> */}
     </>
   );
 }

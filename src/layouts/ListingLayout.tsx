@@ -1,14 +1,14 @@
 // src/components/Layout.tsx
 import { useEffect } from "react";
 import { useState } from "react";
-import Sidebar from "./Sidebar";
-import Main from "./Main";
-import Notification from "./Notification";
-import MuseumTitle from "./MuseumTitle";
-import MuseumDetails from "./MuseumDetails";
-import MuseumCards from "./MuseumCards";
+import Sidebar from "../components/Sidebar";
+import Main from "../components/Main";
+import Notification from "../components/Notification";
+import MuseumTitle from "../components/MuseumTitle";
+import MuseumDetails from "../components/MuseumDetails";
+import MuseumCards from "../components/MuseumCards";
 import { supabase } from "../lib/supabaseClient";
-import Thinbar from "./Thinbar";
+import Thinbar from "../components/Thinbar";
 
 /**
  * Top‑level page layout.

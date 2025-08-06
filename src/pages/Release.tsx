@@ -11,7 +11,7 @@ export default function Release() {
   }, []);
   return (
     <>
-      <WebsiteNav />
+      {/* <WebsiteNav /> */}
 
       <main className="release-page">
         <div className="section release-container">
@@ -196,7 +196,7 @@ export default function Release() {
             </ul>
           </div>
         </div>
-        <WebsiteFooter />
+        {/* <WebsiteFooter /> */}
       </main>
     </>
   );
