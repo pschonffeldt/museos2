@@ -15,7 +15,7 @@ export default function Thinbar({ children }: ThinbarProps) {
   ];
 
   return (
-    <div className="thin-nav">
+    <aside className="thin-nav">
       <div className="thin-nav-toolkit">
         <div className="thin-nav-tools">
           {features.map((feat) => (
@@ -37,6 +37,6 @@ export default function Thinbar({ children }: ThinbarProps) {
         <AvatarIcon className="thin-icon" />
         <GearIcon className="thin-icon" />
       </div>
-    </div>
+    </aside>
   );
 }

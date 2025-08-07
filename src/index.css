@@ -338,7 +338,7 @@ a.nav-bar-button {
   width: 100%;
   height: 100vh;
   background-color: var(--color-gray);
-  overflow-y: scroll; /* Enable scrolling */
+  overflow-y: auto; /* Enable scrolling */
 }
 
 /* Custom scrollbar for details */
@@ -421,6 +421,7 @@ a.nav-bar-button {
   background-color: var(--color-lightblue);
   margin-top: 4px;
 }
+
 .museum-summary-card-detail {
   font-size: 12px;
   color: var(--color-darkestgray);
@@ -1387,4 +1388,143 @@ websitefooter-email a:hover {
   background: var(--color-red);
   color: var(--color-darkred);
   border: 1px solid var(--color-darkred);
+}
+
+/* ==========================================================================
+   Dashboard feature
+   ========================================================================== */
+
+.dashboard__layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard__rows {
+  background-color: var(--color-gray);
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dashboard__row {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.dashboard__row__card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-evenly;
+}
+
+.dashboard__row__card-chart {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  /* background-color: yellow; */
+}
+
+.dashboard__row__card-title {
+  /* background-color: blue; */
+  padding-bottom: 4px;
+  color: var(--color-darkestgray);
+}
+
+.dashboard__row__card-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-lightblue);
+  margin-top: 4px;
+}
+
+.dashboard__row__card-facts {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashboard__row__card-chart-layout {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.chart {
+  height: 200px;
+  width: 200px;
+  background-color: var(--color-lightblue);
+  border-radius: 100%;
+}
+
+.dashboard__row__card-chart-legend {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dashboard__row__card-fact {
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.dashboard__row__card-fact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-lightblue);
+  height: 50px;
+  width: 50px;
+  border-radius: var(--base-icon);
+}
+.dashboard__row__card-fact-heading {
+}
+
+.chart100 {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--base-radius);
+  background-color: var(--color-white);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+}
+.chart50 {
+  width: 50%;
+  height: 100%;
+  border-radius: var(--base-radius);
+  background-color: var(--color-white);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+}
+.chart25 {
+  width: 25%;
+  height: 100%;
+  border-radius: var(--base-radius);
+  background-color: var(--color-white);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
 }
