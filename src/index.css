@@ -629,10 +629,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   width: 70px;
-  /* border-right: solid var(--color-darkgray) 0.01px; */
   background-color: var(--color-darkblue);
-  /* padding-top: 20px; */
-  /* padding-bottom: 20px; */
 }
 
 .thin-nav-toolkit {
@@ -641,8 +638,6 @@ footer {
   align-items: center;
   justify-content: start;
   height: 50%;
-  /* padding-top: 20px; */
-  /* padding-bottom: 20px; */
 }
 
 .thin-icon {
@@ -661,7 +656,6 @@ footer {
 
 .thin-nav-tools,
 .thin-nav-user {
-  /* padding-top: 20px; */
   gap: 26px;
   display: flex;
   flex-direction: column;
@@ -680,17 +674,17 @@ footer {
   justify-content: center;
   border-radius: var(--base-radius);
   cursor: pointer;
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 .feature-badge:hover {
   color: var(--color-lightgray);
   transform: scale(1.15);
-
-  /* transform: scale(1.15); */
 }
 
 .feature-badge-letter {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /* ============================

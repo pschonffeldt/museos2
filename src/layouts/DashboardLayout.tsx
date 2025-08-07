@@ -4,12 +4,10 @@ import Thinbar from "../components/Thinbar";
 
 export default function DashboardLayout() {
   return (
-    <div className="app-container">
+    <main className="container">
       <Thinbar />
-      <main className="dashboard-content">
-        {/* you’ll replace this with your real dashboard routes/components */}
-        <h1>Dashboard coming soon</h1>
-      </main>
-    </div>
+      {/* you’ll replace this with your real dashboard routes/components */}
+      <h1>Dashboard coming soon</h1>
+    </main>
   );
 }
