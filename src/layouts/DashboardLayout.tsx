@@ -118,19 +118,47 @@ export default function DashboardLayout() {
         {/* Second row */}
         <div className="dashboard__row">
           <div className="chart50">
-            <h2>Museum region distribution (bar)</h2>
+            <div className="dashboard__row__card">
+              <div className="dashboard__row__card-title">
+                <h2>Distribución por región</h2>
+              </div>
+              <div className="dashboard__row__card-facts">
+                <div className="dashboard__row__card-fact"></div>
+              </div>
+            </div>
           </div>
           <div className="chart25">
-            <h2>Museum entry type distribution (pie)</h2>
+            <div className="dashboard__row__card">
+              <div className="dashboard__row__card-title">
+                <h2>Costo de museos</h2>
+              </div>
+              <div className="dashboard__row__card-facts">
+                <div className="dashboard__row__card-fact"></div>
+              </div>
+            </div>
           </div>
           <div className="chart25">
-            <h2>Museum has discount distribution (pie)</h2>
+            <div className="dashboard__row__card">
+              <div className="dashboard__row__card-title">
+                <h2>Museos con descuentos</h2>
+              </div>
+              <div className="dashboard__row__card-facts">
+                <div className="dashboard__row__card-fact"></div>
+              </div>
+            </div>
           </div>
         </div>
         {/* Third row */}
         <div className="dashboard__row">
           <div className="chart100">
-            <h2>Museum database growth over time (line chart)</h2>
+            <div className="dashboard__row__card">
+              <div className="dashboard__row__card-title">
+                <h2>Museos registrados</h2>
+              </div>
+              <div className="dashboard__row__card-facts">
+                <div className="dashboard__row__card-fact"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

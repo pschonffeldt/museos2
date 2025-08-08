@@ -13,9 +13,11 @@ textarea {
   all: unset; /* Remove all default browser styles on <textarea> */
 }
 
+html,
 body {
   font-family: "Inter", sans-serif;
   overflow: auto;
+  height: 100%;
 }
 
 #root {
@@ -1408,6 +1410,8 @@ websitefooter-email a:hover {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  height: 100vh; /* ← this makes the scroll possible */
+  overflow-y: auto; /* ← this activates the scroll */
 }
 
 .dashboard__row {
